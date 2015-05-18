@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Theo | Home</title>
+
+        <!-- core CSS -->
+        <link href="fancy/css/bootstrap.min.css" rel="stylesheet">
+        <link href="fancy/css/font-awesome.min.css" rel="stylesheet">
+        <link href="fancy/css/animate.min.css" rel="stylesheet">
+        <link href="fancy/css/prettyPhoto.css" rel="stylesheet">
+        <link href="fancy/css/main.css" rel="stylesheet">
+        <link href="fancy/css/responsive.css" rel="stylesheet">
+        <!-- JavaScript -->
+        <!-- SMOOTH SCROLL -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            $(function() {
+                $('a[href*=#]:not([href=#])').click(function() {
+                    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top
+                            }, 1300);
+                            return false;
+                        }
+                    }
+                });
+            });
+        </script>
+        <!-- End of SMOOTH SCROLL -->
+        <!--Google Analytics Tracking-->
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59293433-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!--End of Google Analytics Tracking-->
+        <!--[if lt IE 9]>
+<script src="fancy/js/html5shiv.js"></script>
+<script src="fancy/js/respond.min.js"></script>
+<![endif]-->       
+        <link rel="shortcut icon" href="fancy/images/icons/favicon.ico">
+        <style type="text/css"></style>
+    </head><!--/head-->
+
+    <body class="homepage" id="page-top">
+
+        <header id="header">
+            <div class="top-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-4">
+                        </div>
+                        <div class="col-sm-6 col-xs-8">
+                            <div class="social">
+                                <div class="search">
+                                    <form role="form">
+                                        <input type="text" class="search-form" autocomplete="off" placeholder="Search">
+                                        <i class="fa fa-search"></i>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.container-->
+            </div><!--/.top-bar-->
+
+            <nav class="navbar navbar-inverse" role="banner">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="fancy/index.html"><i class="fa fa-terminal fa-lg"></i>Theo Fleck</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="fancyindex.html">Home</a></li>
+                            <li><a href="about.html">About Me</a></li>
+                            <li class="active"><a href="projects.html">Projects</a></li>
+                            <li><a href="contact.html">Contact</a></li>                        
+                        </ul>
+                    </div>
+                </div><!--/.container-->
+            </nav><!--/nav-->
+
+        </header><!--/header-->
+    <section id="portfolio">
+        <div class="container">
+            <div class="center">
+               <h2>Portfolio</h2>
+               <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>
+        
+
+            <ul class="portfolio-filter text-center">
+                <li><a class="btn btn-default active" href="#" data-filter="*">All Works</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".bootstrap">Creative</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".html">Photography</a></li>
+                <li><a class="btn btn-default" href="#" data-filter=".wordpress">Web Development</a></li>
+            </ul><!--/#portfolio-filter-->
+
+            <div class="row">
+                <div class="portfolio-items">
+                    <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item1.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Business theme</a></h3>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <a class="preview" href="images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item joomla bootstrap col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item2.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Business theme</a></h3>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <a class="preview" href="images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item bootstrap wordpress col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item3.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Business theme</a></h3>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <a class="preview" href="images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>        
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item joomla wordpress apps col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item4.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Business theme</a></h3>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <a class="preview" href="images/portfolio/full/item4.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>           
+                    </div><!--/.portfolio-item-->
+          
+                    <div class="portfolio-item joomla html bootstrap col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item5.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Business theme</a></h3>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <a class="preview" href="images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>      
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress html apps col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item6.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Business theme</a></h3>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <a class="preview" href="images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>         
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress html col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item7.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Business theme</a></h3>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <a class="preview" href="images/portfolio/full/item7.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+
+                    <div class="portfolio-item wordpress html bootstrap col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            <img class="img-responsive" src="images/portfolio/recent/item8.png" alt="">
+                            <div class="overlay">
+                                <div class="recent-work-inner">
+                                    <h3><a href="#">Business theme</a></h3>
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <a class="preview" href="images/portfolio/full/item8.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                </div> 
+                            </div>
+                        </div>          
+                    </div><!--/.portfolio-item-->
+                </div>
+            </div>
+        </div>
+    </section><!--/#portfolio-item-->
+    
+    <section id="bottom">
+        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">We are hiring</a></li>
+                            <li><a href="#">Meet the team</a></li>
+                            <li><a href="#">Copyright</a></li>
+                            <li><a href="#">Terms of use</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Faq</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Refund policy</a></li>
+                            <li><a href="#">Ticket system</a></li>
+                            <li><a href="#">Billing system</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Developers</h3>
+                        <ul>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">SEO Marketing</a></li>
+                            <li><a href="#">Theme</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Email Marketing</a></li>
+                            <li><a href="#">Plugin Development</a></li>
+                            <li><a href="#">Article Writing</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Our Partners</h3>
+                        <ul>
+                            <li><a href="#">Adipisicing Elit</a></li>
+                            <li><a href="#">Eiusmod</a></li>
+                            <li><a href="#">Tempor</a></li>
+                            <li><a href="#">Veniam</a></li>
+                            <li><a href="#">Exercitation</a></li>
+                            <li><a href="#">Ullamco</a></li>
+                            <li><a href="#">Laboris</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+    <footer id="footer" class="midnight-blue">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="#page-top">
+                            &copy; 2015 Theo Fleck 
+                            <br>me@theofleck.com
+                            <br>
+                            http://www.theofleck.com
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="pull-right">
+                            <li><a href="fancyindex.html">Home</a></li>
+                            <li><a href="about.html">About Me</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer><!--/#footer-->
+
+        <script src="fancy/js/jquery.js"></script>
+        <script src="fancy/js/bootstrap.min.js"></script>
+        <script src="fancy/js/jquery.prettyPhoto.js"></script>
+        <script src="fancy/js/jquery.isotope.min.js"></script>
+        <script src="fancy/js/main.js"></script>
+        <script src="fancy/js/wow.min.js"></script>
+    </body>
+</html>
