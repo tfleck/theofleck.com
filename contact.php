@@ -134,7 +134,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
                             <li><a href="fancyindex.html">Home</a></li>
                             <li><a href="about.html">About Me</a></li>
                             <li><a href="projects.html">Projects</a></li>
-                            <li class="active"><a href="contact.html">Contact</a></li>                        
+                            <li class="active"><a href="contact.php">Contact</a></li>                        
                         </ul>
                     </div>
                 </div><!--/.container-->
@@ -208,7 +208,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
                             <li><a href="fancyindex.html">Home</a></li>
                             <li><a href="about.html">About Me</a></li>
                             <li><a href="projects.html">Projects</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="contact.php">Contact</a></li>
                         </ul>
                     </div>
                 </div>
