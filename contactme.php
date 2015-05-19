@@ -134,7 +134,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About Me</a></li>
                             <li><a href="projects.html">Projects</a></li>
-                            <li class="active"><a href="contact.php">Contact</a></li>                        
+                            <li class="active"><a href="contact.html">Contact</a></li>                        
                         </ul>
                     </div>
                 </div><!--/.container-->
@@ -147,7 +147,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
             <div class="center">       
                 <br><h2>Drop Your Message</h2>
             </div> 
-            <form class="form-horizontal" role="form" method="post" action="contact.php">
+            <form class="form-horizontal" role="form" method="post" action="contact.html">
 				<div class="form-group">
         <div class="col-sm-10 col-sm-offset-2">
             <?php echo $result; ?>    
@@ -195,7 +195,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
                 <div class="row">
                     <div class="col-sm-6">
                         Theo Fleck
-                        <br>me@theofleck.com
+                        
                         <a href="#page-top">
                         <br>http://www.theofleck.com</a>
                         <a target="_blank" href="http://www.getbootstrap.com">   
@@ -208,7 +208,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
                             <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About Me</a></li>
                             <li><a href="projects.html">Projects</a></li>
-                            <li><a href="contact.php">Contact</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
                 </div>
