@@ -1,3 +1,44 @@
+<?php
+    if ($_POST["submit"]) {
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+        $human = intval($_POST['human']);
+        $from = 'Website Contact Form'; 
+        $to = 'emailtfleck@gmail.com'; 
+        $subject = 'Website Form Response ';
+        
+        $body = "From: $name\nE-Mail: $email\nMessage: $message";
+ 
+        // Check if name has been entered
+        if (!$_POST['name']) {
+            $errName = 'Please enter your name';
+        }
+        
+        // Check if email has been entered and is valid
+        if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            $errEmail = 'Please enter a valid email address';
+        }
+        
+        //Check if message has been entered
+        if (!$_POST['message']) {
+            $errMessage = 'Please enter your message';
+        }
+        //Check if simple anti-bot test is correct
+        if ($human !== 5) {
+            $errHuman = 'Your anti-spam is incorrect';
+        }
+ 
+// If there are no errors, send the email
+if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
+    if (mail ($to, $subject, $body, $from)) {
+        $result='<div class="alert alert-success">Thank You! I will be in touch</div>';
+    } else {
+        $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
+    }
+}
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -90,23 +131,66 @@
 
                     <div class="collapse navbar-collapse navbar-right">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="fancyindex.html">Home</a></li>
+                            <li><a href="fancyindex.html">Home</a></li>
                             <li><a href="about.html">About Me</a></li>
                             <li><a href="projects.html">Projects</a></li>
-                            <li><a href="contact.html">Contact</a></li>                        
+                            <li class="active"><a href="contact.html">Contact</a></li>                        
                         </ul>
                     </div>
                 </div><!--/.container-->
             </nav><!--/nav-->
 
         </header><!--/header-->
-        <section id="error" class="container text-center">
-            <h1>404, Page not found</h1>
-            <p>The Page you are looking for doesn't exist or an other error occurred.</p>
-            <a class="btn btn-primary" href="fancyindex.html">Back to Home</a>
-        </section><!--/#error-->
 
-         <footer id="footer" class="midnight-blue">
+    <section id="contact-page">
+        <div class="container">
+            <div class="center">       
+                <br><h2>Drop Your Message</h2>
+            </div> 
+            <form class="form-horizontal" role="form" method="post" action="contact.php">
+				<div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+            <?php echo $result; ?>    
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name">
+            <?php echo "<p class='text-danger'>$errName</p>";?>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com">
+            <?php echo "<p class='text-danger'>$errEmail</p>";?>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="message" class="col-sm-2 control-label">Message</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" rows="4" name="message"></textarea>
+            <?php echo "<p class='text-danger'>$errMessage</p>";?>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+            <?php echo "<p class='text-danger'>$errHuman</p>";?>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+            <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+        </div>
+    </div>
+</form> 
+        </div><!--/.container-->
+    </section><!--/#contact-page-->
+
+     <footer id="footer" class="midnight-blue">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
