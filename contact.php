@@ -131,7 +131,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
 
                     <div class="collapse navbar-collapse navbar-right">
                         <ul class="nav navbar-nav">
-                            <li><a href="fancyindex.html">Home</a></li>
+                            <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About Me</a></li>
                             <li><a href="projects.html">Projects</a></li>
                             <li class="active"><a href="contact.php">Contact</a></li>                        
@@ -205,7 +205,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
                     </div>
                     <div class="col-sm-6">
                         <ul class="pull-right">
-                            <li><a href="fancyindex.html">Home</a></li>
+                            <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About Me</a></li>
                             <li><a href="projects.html">Projects</a></li>
                             <li><a href="contact.php">Contact</a></li>
