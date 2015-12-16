@@ -8,16 +8,35 @@
         <title>Theo | SandRand</title>
         <script>
             function getSandwich(){
-                var r1 = Math.random();
-                if(r1 <= (1.0/3.0)){
-                    document.getElementById("bread").innerHTML = "Bread: Kaiser Roll"+String(r1);
+                var r = Math.random();
+                if(r <= (1.0/3.0)){
+                    document.getElementById("bread").innerHTML = "Bread: Kaiser Roll";
                 }
-                else if(r1 <= (2.0/3.0)){
-                    document.getElementById("bread").innerHTML = "Bread: Hoagie Roll"+String(r1);
+                else if(r <= (2.0/3.0)){
+                    document.getElementById("bread").innerHTML = "Bread: Hoagie Roll";
                 }
                 else{
-                    document.getElementById("bread").innerHTML = "Bread: Wrap"+String(r1);
+                    document.getElementById("bread").innerHTML = "Bread: Wrap";
                 }
+                r = Math.random();
+                if(r <= (1.0/5.0)){
+                    document.getElementById("cheese").innerHTML = "Cheese: American";
+                }
+                else if(r <= (2.0/5.0)){
+                    document.getElementById("cheese").innerHTML = "Cheese: Provolone";
+                }
+                else if(r <= (3.0/5.0)){
+                    document.getElementById("cheese").innerHTML = "Cheese: Cheddar";
+                }
+                else if(r <= (4.0/5.0)){
+                    document.getElementById("cheese").innerHTML = "Cheese: Swiss";
+                }
+                else{
+                    document.getElementById("cheese").innerHTML = "Cheese: Pepper Jack";
+                }
+                var meat = document.getElementById("meat");
+                meat += " extra meat";
+                document.write(meat);
             }
         </script>
     </head><!--/head-->
@@ -75,11 +94,12 @@
                     <p class="lead">A random sandwich generator for the MHS Cafeteria</p>
                     <br>
                     <button type="button" onClick="getSandwich()">Get Your Random Sandwich</button>
+                    <br>
                     <p id="bread">Bread: none</p>
-                    <p id="bread">Cheese: none</p>
-                    <p id="bread">Meats: none</p>
-                    <p id="bread">Toppings: none</p>
-                    <p id="bread">Dressing: none</p>
+                    <p id="cheese">Cheese: none</p>
+                    <p id="meat">Meats: none</p>
+                    <p id="topping">Toppings: none</p>
+                    <p id="dressing">Dressing: none</p>
                 </div>
 
         <footer id="footer" style="background-color:#191919" class="midnight-blue">
