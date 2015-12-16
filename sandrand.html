@@ -85,7 +85,125 @@
                     document.getElementById("meat2").innerHTML = "Meat 2: No Meat For You";
                 }
                 r = Math.random();
-                //toppings
+                if(r <= 1){
+                    var r4 = Math.random();
+                    if(r4 < (1.0/8.0)){
+                        document.getElementById("topping1").innerHTML = "Topping 1: Lettuce";
+                    }
+                    else if(r4 < (2.0/8.0)){
+                        document.getElementById("topping1").innerHTML = "Topping 1: Tomato";
+                    }
+                    else if(r4 < (3.0/8.0)){
+                        document.getElementById("topping1").innerHTML = "Topping 1: Spinach";
+                    }
+                    else if(r4 < (4.0/8.0)){
+                        document.getElementById("topping1").innerHTML = "Topping 1: Olives";
+                    }
+                    else if(r4 < (5.0/8.0)){
+                        document.getElementById("topping1").innerHTML = "Topping 1: Onions";
+                    }
+                    else if(r4 < (6.0/8.0)){
+                        document.getElementById("topping1").innerHTML = "Topping 1: Sweet Peppers";
+                    }
+                    else if(r4 < (7.0/8.0)){
+                        document.getElementById("topping1").innerHTML = "Topping 1: Banana Peppers";
+                    }
+                    else{
+                        document.getElementById("topping1").innerHTML = "Topping 1: Pickles";
+                    }
+                    if(r > 0.75){
+                        document.getElementById("topping2").innerHTML = "Topping 2: none";
+                        document.getElementById("topping3").innerHTML = "Topping 3: none";
+                        document.getElementById("topping4").innerHTML = "Topping 4: none";
+                    }
+                }
+                if(r <= 0.75){
+                    var r4 = Math.random();
+                    if(r4 < (1.0/8.0)){
+                        document.getElementById("topping2").innerHTML = "Topping 2: Lettuce";
+                    }
+                    else if(r4 < (2.0/8.0)){
+                        document.getElementById("topping2").innerHTML = "Topping 2: Tomato";
+                    }
+                    else if(r4 < (3.0/8.0)){
+                        document.getElementById("topping2").innerHTML = "Topping 2: Spinach";
+                    }
+                    else if(r4 < (4.0/8.0)){
+                        document.getElementById("topping2").innerHTML = "Topping 2: Olives";
+                    }
+                    else if(r4 < (5.0/8.0)){
+                        document.getElementById("topping2").innerHTML = "Topping 2: Onions";
+                    }
+                    else if(r4 < (6.0/8.0)){
+                        document.getElementById("topping2").innerHTML = "Topping 2: Sweet Peppers";
+                    }
+                    else if(r4 < (7.0/8.0)){
+                        document.getElementById("topping2").innerHTML = "Topping 2: Banana Peppers";
+                    }
+                    else{
+                        document.getElementById("topping2").innerHTML = "Topping 2: Pickles";
+                    }
+                    if(r > 0.5){
+                        document.getElementById("topping3").innerHTML = "Topping 3: none";
+                        document.getElementById("topping4").innerHTML = "Topping 4: none";
+                    }
+                }
+                if(r <= 0.5){
+                    var r4 = Math.random();
+                    if(r4 < (1.0/8.0)){
+                        document.getElementById("topping3").innerHTML = "Topping 3: Lettuce";
+                    }
+                    else if(r4 < (2.0/8.0)){
+                        document.getElementById("topping3").innerHTML = "Topping 3: Tomato";
+                    }
+                    else if(r4 < (3.0/8.0)){
+                        document.getElementById("topping3").innerHTML = "Topping 3: Spinach";
+                    }
+                    else if(r4 < (4.0/8.0)){
+                        document.getElementById("topping3").innerHTML = "Topping 3: Olives";
+                    }
+                    else if(r4 < (5.0/8.0)){
+                        document.getElementById("topping3").innerHTML = "Topping 3: Onions";
+                    }
+                    else if(r4 < (6.0/8.0)){
+                        document.getElementById("topping3").innerHTML = "Topping 3: Sweet Peppers";
+                    }
+                    else if(r4 < (7.0/8.0)){
+                        document.getElementById("topping3").innerHTML = "Topping 3: Banana Peppers";
+                    }
+                    else{
+                        document.getElementById("topping3").innerHTML = "Topping 3: Pickles";
+                    }
+                    if(r > 0.25){
+                        document.getElementById("topping4").innerHTML = "Topping 4: none";
+                    }
+                }if(r <= 0.25){
+                    var r4 = Math.random();
+                    if(r4 < (1.0/8.0)){
+                        document.getElementById("topping4").innerHTML = "Topping 4: Lettuce";
+                    }
+                    else if(r4 < (2.0/8.0)){
+                        document.getElementById("topping4").innerHTML = "Topping 4: Tomato";
+                    }
+                    else if(r4 < (3.0/8.0)){
+                        document.getElementById("topping4").innerHTML = "Topping 4: Spinach";
+                    }
+                    else if(r4 < (4.0/8.0)){
+                        document.getElementById("topping4").innerHTML = "Topping 4: Olives";
+                    }
+                    else if(r4 < (5.0/8.0)){
+                        document.getElementById("topping4").innerHTML = "Topping 4: Onions";
+                    }
+                    else if(r4 < (6.0/8.0)){
+                        document.getElementById("topping4").innerHTML = "Topping 4: Sweet Peppers";
+                    }
+                    else if(r4 < (7.0/8.0)){
+                        document.getElementById("topping4").innerHTML = "Topping 4: Banana Peppers";
+                    }
+                    else{
+                        document.getElementById("topping4").innerHTML = "Topping 4: Pickles";
+                    }
+                }
                 r = Math.random();
                 if(r <= 0.25){
                     document.getElementById("dressing").innerHTML = "Dressing: None";
