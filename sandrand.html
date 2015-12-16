@@ -10,13 +10,13 @@
             function getSandwich(){
                 var r1 = Math.random();
                 if(r1 <= (1.0/3.0)){
-                    document.getElementById("bread").innerHTML = "Bread: Kaiser Roll";
+                    document.getElementById("bread").innerHTML = "Bread: Kaiser Roll"+String(r1);
                 }
                 else if(r1 <= (2.0/3.0)){
-                    document.getElementById("bread").innerHTML = "Bread: Hoagie Roll";
+                    document.getElementById("bread").innerHTML = "Bread: Hoagie Roll"+String(r1);
                 }
                 else{
-                    document.getElementById("bread").innerHTML = "Bread: Wrap";
+                    document.getElementById("bread").innerHTML = "Bread: Wrap"+String(r1);
                 }
             }
         </script>
