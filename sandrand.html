@@ -8,7 +8,16 @@
         <title>Theo | SandRand</title>
         <script>
             function getSandwich(){
-                
+                var r1 = Math.random();
+                if(r1 <= (1.0/3.0)){
+                    document.getElementById("bread").innerHTML = "Bread: Kaiser Roll";
+                }
+                else if(r1 <= (2.0/3.0)){
+                    document.getElementById("bread").innerHTML = "Bread: Hoagie Roll";
+                }
+                else{
+                    document.getElementById("bread").innerHTML = "Bread: Wrap";
+                }
             }
         </script>
     </head><!--/head-->
