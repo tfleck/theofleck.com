@@ -34,9 +34,69 @@
                 else{
                     document.getElementById("cheese").innerHTML = "Cheese: Pepper Jack";
                 }
-                var meat = document.getElementById("meat");
-                meat += " extra meat";
-                document.write(meat);
+                r = Math.random();
+                if( r <= 0.475){
+                    var r2 = Math.random();
+                    if(r2 < (1.0/6.0)){
+                        document.getElementById("meat2").innerHTML = "Meat 2: Ham";
+                    }
+                    else if(r2 < (2.0/6.0)){
+                        document.getElementById("meat2").innerHTML = "Meat 2: Turkey";
+                    }
+                    else if(r2 < (3.0/6.0)){
+                        document.getElementById("meat2").innerHTML = "Meat 2: Roast Beef";
+                    }
+                    else if(r2 < (4.0/6.0)){
+                        document.getElementById("meat2").innerHTML = "Meat 2: Chicken Salad";
+                    }
+                    else if(r2 < (5.0/6.0)){
+                        document.getElementById("meat2").innerHTML = "Meat 2: Tuna Salad";
+                    }
+                    else{
+                        document.getElementById("meat2").innerHTML = "Meat 2: Chicken";
+                    }
+                    document.getElementById("meat2").innerHTML = "Meat 1: none";
+                }
+                if (r <= 0.95){
+                    var r3 = Math.random();
+                    if(r3 < (1.0/6.0)){
+                        document.getElementById("meat1").innerHTML = "Meat 1: Ham";
+                    }
+                    else if(r3 < (2.0/6.0)){
+                        document.getElementById("meat1").innerHTML = "Meat 1: Turkey";
+                    }
+                    else if(r3 < (3.0/6.0)){
+                        document.getElementById("meat1").innerHTML = "Meat 1: Roast Beef";
+                    }
+                    else if(r3 < (4.0/6.0)){
+                        document.getElementById("meat1").innerHTML = "Meat 1: Chicken Salad";
+                    }
+                    else if(r3 < (5.0/6.0)){
+                        document.getElementById("meat1").innerHTML = "Meat 1: Tuna Salad";
+                    }
+                    else{
+                        document.getElementById("meat1").innerHTML = "Meat 1: Chicken";
+                    }
+                }
+                if( r > 0.95){
+                    document.getElementById("meat1").innerHTML = "Meat 1: No Meat For You!";
+                    document.getElementById("meat2").innerHTML = "Meat 2: No Meat For You";
+                }
+                r = Math.random();
+                //toppings
+                r = Math.random();
+                if(r <= 0.25){
+                    document.getElementById("dressing").innerHTML = "Dressing: None";
+                }
+                else if(r <= 0.25){
+                    document.getElementById("dressing").innerHTML = "Dressing: Ranch";
+                }
+                else if(r <= 0.25){
+                    document.getElementById("dressing").innerHTML = "Dressing: Honey Mustard";
+                }
+                else{
+                    document.getElementById("dressing").innerHTML = "Dressing: Oil";
+                }
             }
         </script>
     </head><!--/head-->
@@ -97,8 +157,12 @@
                     <br>
                     <p id="bread">Bread: none</p>
                     <p id="cheese">Cheese: none</p>
-                    <p id="meat">Meats: none</p>
-                    <p id="topping">Toppings: none</p>
+                    <p id="meat1">Meat 1: none</p>
+                    <p id="meat2">Meat 2: none</p>
+                    <p id="topping1">Topping 1: none</p>
+                    <p id="topping2">Topping 2: none</p>
+                    <p id="topping3">Topping 3: none</p>
+                    <p id="topping4">Topping 4 none</p>
                     <p id="dressing">Dressing: none</p>
                 </div>
 
