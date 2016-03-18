@@ -193,14 +193,15 @@
         <link href="css/responsive.css" rel="stylesheet">
         
         <!-- JS -->
+        <script>
         function onSignIn(googleUser) {
           var profile = googleUser.getBasicProfile();
           console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
           console.log('Name: ' + profile.getName());
           console.log('Image URL: ' + profile.getImageUrl());
           console.log('Email: ' + profile.getEmail());
-          alert(profile);
-        }
+          alert(profile.getId());
+        }</script>
         <script async src="js/jquery.js"></script>
         <script async src="js/bootstrap.min.js"></script>
         <script async src="js/jquery.prettyPhoto.js"></script>
