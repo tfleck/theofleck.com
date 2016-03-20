@@ -23,8 +23,7 @@
         </script>
         <script>
             function onSuccess(googleUser) {
-              document.getElementById("loginButton").innerHTML="<i class='fa fa-lock'></i>&nbsp;Logged In / Sign Out";
-              document.getElementById('loginButton').setAttribute('onClick','signOut()');
+              document.getElementById("loginButton").innerHTML="<i class='fa fa-lock'></i>&nbsp;Logged In</a> / <a onClick='signOut' href='#' style='color:black'>Sign Out</a>"
             }
             function onFailure(error) {
                 console.log(error);
@@ -46,7 +45,6 @@
                   console.log('User signed out.');
                 });
                 document.getElementById("loginButton").innerHTML="<i class='fa fa-sign-in'></i> Login/Register";
-                document.getElementById('loginButton').setAttribute('onClick','load_Modal()');
             }
         </script>
         <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
@@ -135,7 +133,7 @@
             <div class="container">
                 <div class="center">
                     <h2>Theo Fleck</h2>
-                    <p>Updated=5</p>
+                    <p>Updated=6</p>
                     <p class="lead">Hi there, my name is Theo Fleck, Head of Software Development for Real Random</p>
                     <a id="loginButton" onClick="load_modal()" href="#" style="color:black">
                                         <i class="fa fa-sign-in"></i> Login/Register
