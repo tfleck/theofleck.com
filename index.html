@@ -24,7 +24,7 @@
         <script>
             function onSuccess(googleUser) {
               document.getElementById("loginButton").innerHTML="<i class='fa fa-lock'></i>&nbsp;Logged In";
-                document.getElementById("loginButton").onClick="signOut()";
+              document.getElementById("loginButton").onClick="signOut()";
             }
             function onFailure(error) {
                 console.log(error);
@@ -32,7 +32,7 @@
             function renderButton() {
               gapi.signin2.render('my-signin2', {
                 'scope': 'profile email',
-                'width': 500,
+                'width': 240,
                 'height': 50,
                 'longtitle': true,
                 'theme': 'dark',
@@ -40,10 +40,12 @@
                 'onfailure': onFailure
               });
             }
-          function signOut() {
-            var auth2 = gapi.auth2.getAuthInstance();
-            auth2.signOut();
-          }
+            function signOut() {
+                var auth2 = gapi.auth2.getAuthInstance();
+                auth2.signOut().then(function () {
+                  console.log('User signed out.');
+                });
+            }
         </script>
         <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
         <script async defer src="js/jquery.js"></script>
@@ -135,6 +137,9 @@
                     <p class="lead">Hi there, my name is Theo Fleck, Head of Software Development for Real Random</p>
                     <a id="loginButton" onClick="load_modal()" href="#" style="color:black">
                                         <i class="fa fa-sign-in"></i> Login/Register
+                                        </a><br>
+                    <a id="signoutbutton" onClick="signOut()" href="#" style="color:black">
+                                         Sign Out
                                         </a>
                 </div>
 
