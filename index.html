@@ -23,7 +23,8 @@
         </script>
         <script>
             function onSuccess(googleUser) {
-              document.getElementById("loginButton").innerHTML="<i class='fa fa-lock'></i>&nbsp;Logged In</a> / <a onClick='signOut' href='#' style='color:black'>Sign Out</a>"
+              document.getElementById("loginButton").innerHTML="<i class='fa fa-lock'></i>&nbsp;Logged In / Sign Out";
+              document.getElementById('loginButton').setAttribute('onClick','signOut()');
             }
             function onFailure(error) {
                 console.log(error);
@@ -41,10 +42,9 @@
             }
             function signOut() {
                 var auth2 = gapi.auth2.getAuthInstance();
-                auth2.signOut().then(function () {
-                  console.log('User signed out.');
-                });
+                auth2.signOut();
                 document.getElementById("loginButton").innerHTML="<i class='fa fa-sign-in'></i> Login/Register";
+                document.getElementById('loginButton').setAttribute('onClick','load_modal()');
             }
         </script>
         <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
@@ -69,10 +69,11 @@
                     <div class="modal-body">
                       <div class="wrapper">
                           <div id="my-signin2" class="g-signin2" data-onsuccess="onSignIn"></div>
-                        <form class="form-signin">       
-                          <input type="email" class="form-control" name="username" placeholder="Email Address" required="" autofocus=""/>
-                          <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
-                          <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button> 
+                        <form class="form-signup">    
+                          <input type="text" class="form-control" name="firstname" placeholder="First Name" required="" autofocus=""/>
+                          <input type="text" class="form-control" name="lastname" placeholder="Last Name" required=""/>
+                          <input type="email" class="form-control" name="email" placeholder="Email Address (@gmail.com)" required=""/>     
+                          <button class="btn btn-lg btn-primary btn-block" type="submit">Request Access</button> 
                           <h3 style="text-align:left">Forgot your password?<br>
                           Request an account</h3>
                         </form>
@@ -133,7 +134,7 @@
             <div class="container">
                 <div class="center">
                     <h2>Theo Fleck</h2>
-                    <p>Updated=6</p>
+                    <p>Updated=7</p>
                     <p class="lead">Hi there, my name is Theo Fleck, Head of Software Development for Real Random</p>
                     <a id="loginButton" onClick="load_modal()" href="#" style="color:black">
                                         <i class="fa fa-sign-in"></i> Login/Register
