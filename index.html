@@ -24,7 +24,8 @@
         </script>
         <script>
             function onSuccess(googleUser) {
-              document.getElementById("loginButton").innerHTML="<i class='fa fa-lock'></i>&nbsp;Logged In"; 
+              document.getElementById("loginButton").innerHTML="<i class='fa fa-lock'></i>&nbsp;Logged In";
+                document.getElementById("loginButton").onClick="signOut()";
             }
             function onFailure(error) {
                 console.log(error);
@@ -40,6 +41,10 @@
                 'onfailure': onFailure
               });
             }
+          function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut();
+          }
         </script>
         <script async defer src="js/jquery.js"></script>
         <script async defer src="js/bootstrap.min.js"></script>
