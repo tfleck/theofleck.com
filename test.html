@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Real Random</title>
+
+        <!-- core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link href="css/prettyPhoto.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+        <!-- JavaScript -->
+        <!-- Google Sign in -->
+        <meta name="google-signin-client_id" content="828156801572-vm9q37ufk724jijffp329ssnn02sld1t.apps.googleusercontent.com">
+        <script type="text/javascript">
+        function load_modal(){
+            $('#loginModal').appendTo("#feature").modal('show');
+        }
+        </script>
+        <script>
+            function onSuccess(googleUser) {
+              document.getElementById("loginButton").innerHTML="<i class='fa fa-lock'></i>&nbsp;Logged In / Sign Out";
+              document.getElementById('loginButton').setAttribute('onClick','signOut()');
+            }
+            function onFailure(error) {
+                console.log(error);
+            }
+            function renderButton() {
+              gapi.signin2.render('my-signin2', {
+                'scope': 'profile email',
+                'width': 240,
+                'height': 50,
+                'longtitle': true,
+                'theme': 'light',
+                'onsuccess': onSuccess,
+                'onfailure': onFailure
+              });
+            }
+            function signOut() {
+                var auth2 = gapi.auth2.getAuthInstance();
+                auth2.signOut();
+                document.getElementById("loginButton").innerHTML="<i class='fa fa-sign-in'></i> Login/Register";
+                document.getElementById('loginButton').setAttribute('onClick','load_modal()');
+                $('#loginModal').modal("hide");
+                alert("You have been signed out");
+            }
+        </script>
+        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <!-- SMOOTH SCROLL -->
+        <script>
+            $(function() {
+                $('a[href*=#]:not([href=#])').click(function() {
+                    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top
+                            }, 1300);
+                            return false;
+                        }
+                    }
+                });
+            });
+        </script>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.prettyPhoto.js"></script>
+        <script src="js/jquery.isotope.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/wow.min.js"></script>
+        <!-- End of SMOOTH SCROLL -->
+        <!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->       
+        <link rel="shortcut icon" href="images/icons/favicon.ico">
+    </head><!--/head-->
+    
+    <div class="modal fade" id="loginModal" role="dialog">
+                <div class="modal-dialog">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h2 class="modal-title" style="text-align: center"><i class="fa fa-lock"></i> Login To View Restricted Content </h2>
+                    </div>
+                    <div class="modal-body">
+                      <div class="wrapper">
+                          <div id="my-signin2" class="g-signin2"></div><br>
+                          <h3><b>Don't have access already? Request access below</b></h3>
+                        <form class="form-signup">    
+                          <input type="text" class="form-control" name="firstname" placeholder="First Name" required="" autofocus=""/>
+                          <input type="text" class="form-control" name="lastname" placeholder="Last Name" required=""/>
+                          <input type="email" class="form-control" name="email" placeholder="Email Address (@gmail.com)" required=""/>     
+                          <button class="btn btn-lg btn-primary btn-block" type="submit">Request Access</button> 
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div><!-- /Modal -->
+
+    <body class="homepage" id="page-top">
+
+        <header id="header">
+            <div class="top-bar">
+                <div class="container wow">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-4">
+                        </div>
+                        <div class="col-sm-6 col-xs-8">
+                            <div class="social">
+                                <div class="search">
+                                    <a id="loginButton" onClick="load_modal()" href="#" style="color:white">
+                                        <i class="fa fa-sign-in"></i> Login/Register
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.container-->
+            </div><!--/.top-bar-->
+
+            <nav class="navbar navbar-inverse" role="banner" style="background-color:#191919">
+                <div class="container wow">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><i class="fa fa-cube"></i> Real Random</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="how.html">How It Works</a></li>
+                            <li><a href="contact.html">Contact</a></li>                        
+                        </ul>
+                    </div>
+                </div><!--/.container-->
+            </nav><!--/nav-->
+
+        </header><!--/header-->
+        <section id="feature" >
+            <div class="container">
+                <div class="center wow fadeInDown">
+                    <h2>Real Random updated=1</h2>
+                    <p class="lead">The first unhackable, nondeterministic, truly random number generator to be produced on a large scale</p>
+                </div>
+
+                <div class="row">
+                    <div class="features">
+                        <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                            <a href="#services">
+                                <div class="feature-wrap">
+                                    <i class="fa fa-cube"></i>
+                                    <br>
+                                    <h2 style="padding-top:5%">Generation</h2>
+                                    <h3>We use real, physical objects</h3>
+                                </div>
+                            </a>
+                        </div><!--/.col-md-4-->
+
+                        <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                            <div class="feature-wrap">
+                                <i class="fa fa-code"></i>
+                                <br>
+                                <h2 style="padding-top:5%">Platform</h2>
+                                <h3>Secure network delivery</h3>
+                            </div>
+                        </div><!--/.col-md-4-->
+
+                        <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                            <div class="feature-wrap">
+                                <i class="fa fa-lock"></i>
+                                <br>
+                                <h2 style="padding-top:5%">Verifiable Security</h2>
+                                <h3>Timestamped image check</h3>
+                            </div>
+                        </div><!--/.col-md-4-->
+                    </div><!--/.services-->
+                </div><!--/.row-->    
+            </div><!--/.container-->
+        </section><!--/#feature-->
+
+        <section id="recent-works">
+            <div class="container wow fadeInDown">
+                <div class="center">
+                    <h2>News</h2>
+                    <p class="lead">All the news and updates about bringing our product to market</p>
+                </div>
+                <div class="left">
+                    <p class="lead">News update 1<br>
+                                    News update 2<br>
+                    </p>
+                 </div>
+            </div><!--/.container-->
+        </section><!--/#recent-works-->
+
+
+        <footer id="footer" style="background-color:#191919" class="midnight-blue">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        Real Random, LLC
+                        <a href="#page-top">
+                        <br>http://www.realrandomrolls.com</a><br>
+                        <a target="_blank" href="http://www.getbootstrap.com">   
+                        <br>Bootstrap 3 &copy; 2015 Twitter distributed freely under MIT License</a>
+                        <a target="_blank" href="http://shapebootstrap.net/item/corlate-free-responsive-business-html-template/">    
+                        <br>www.shapebootstrap.net Corlate template</a>
+                    </div>
+                    <div class="col-sm-6 hidden-xs">
+                        <ul class="pull-right">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="how.html">How It Works</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer><!--/#footer-->
+    </body>
+</html>
