@@ -24,7 +24,7 @@
         <script>
             function onSuccess(googleUser) {
               document.getElementById("loginButton").innerHTML="<i class='fa fa-lock'></i>&nbsp;Logged In / Sign Out";
-              document.getElementById("loginButton").onClick = function () { signOut(); };
+              document.getElementById('loginButton').setAttribute('onClick','signOut()')
             }
             function onFailure(error) {
                 console.log(error);
