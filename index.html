@@ -24,7 +24,7 @@
         <script>
             function onSuccess(googleUser) {
               document.getElementById("loginButton").innerHTML="<i class='fa fa-lock'></i>&nbsp;Logged In / Sign Out";
-              document.getElementById("loginButton").onclick = function () { signOut(); };
+              document.getElementById("loginButton").onClick = function () { signOut(); };
             }
             function onFailure(error) {
                 console.log(error);
@@ -133,7 +133,7 @@
             <div class="container">
                 <div class="center">
                     <h2>Theo Fleck</h2>
-                    <p>Updated=3</p>
+                    <p>Updated=4</p>
                     <p class="lead">Hi there, my name is Theo Fleck, Head of Software Development for Real Random</p>
                     <a id="loginButton" onClick="load_modal()" href="#" style="color:black">
                                         <i class="fa fa-sign-in"></i> Login/Register
