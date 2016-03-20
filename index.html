@@ -45,6 +45,8 @@
                 auth2.signOut();
                 document.getElementById("loginButton").innerHTML="<i class='fa fa-sign-in'></i> Login/Register";
                 document.getElementById('loginButton').setAttribute('onClick','load_modal()');
+                $('#loginModal').modal("hide");
+                alert("You have been signed out");
             }
         </script>
         <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
@@ -68,14 +70,13 @@
                     </div>
                     <div class="modal-body">
                       <div class="wrapper">
-                          <div id="my-signin2" class="g-signin2" data-onsuccess="onSignIn"></div>
+                          <div id="my-signin2" class="g-signin2"></div><br>
+                          <h3>Don't have access already? Request access below</h3>
                         <form class="form-signup">    
                           <input type="text" class="form-control" name="firstname" placeholder="First Name" required="" autofocus=""/>
                           <input type="text" class="form-control" name="lastname" placeholder="Last Name" required=""/>
                           <input type="email" class="form-control" name="email" placeholder="Email Address (@gmail.com)" required=""/>     
                           <button class="btn btn-lg btn-primary btn-block" type="submit">Request Access</button> 
-                          <h3 style="text-align:left">Forgot your password?<br>
-                          Request an account</h3>
                         </form>
                       </div>
                     </div>
@@ -134,7 +135,7 @@
             <div class="container">
                 <div class="center">
                     <h2>Theo Fleck</h2>
-                    <p>Updated=7</p>
+                    <p>Updated=8</p>
                     <p class="lead">Hi there, my name is Theo Fleck, Head of Software Development for Real Random</p>
                     <a id="loginButton" onClick="load_modal()" href="#" style="color:black">
                                         <i class="fa fa-sign-in"></i> Login/Register
