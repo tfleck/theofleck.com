@@ -14,42 +14,6 @@
         <link href="css/main.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
         <!-- JS -->
-        <!-- Google Sign in -->
-        <meta name="google-signin-client_id" content="828156801572-vm9q37ufk724jijffp329ssnn02sld1t.apps.googleusercontent.com">
-        <script type="text/javascript">
-        function load_modal(){ 
-            $('#loginModal').appendTo("#feature").modal('show');
-        }
-        </script>
-        <script>
-            function onSuccess(googleUser) {
-              document.getElementById("loginButton").innerHTML="<i class='fa fa-lock'></i>&nbsp;Logged In / Sign Out";
-              document.getElementById('loginButton').setAttribute('onClick','signOut()');
-            }
-            function onFailure(error) {
-                console.log(error);
-            }
-            function renderButton() {
-              gapi.signin2.render('my-signin2', {
-                'scope': 'profile email',
-                'width': 240,
-                'height': 50,
-                'longtitle': true,
-                'theme': 'light',
-                'onsuccess': onSuccess,
-                'onfailure': onFailure
-              });
-            }
-            function signOut() {
-                var auth2 = gapi.auth2.getAuthInstance();
-                auth2.signOut();
-                document.getElementById("loginButton").innerHTML="<i class='fa fa-sign-in'></i> Login/Register";
-                document.getElementById('loginButton').setAttribute('onClick','load_modal()');
-                $('#loginModal').modal("hide");
-                alert("You have been signed out");
-            }
-        </script>
-        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
         <script async defer src="js/jquery.js"></script>
         <script async defer src="js/bootstrap.min.js"></script>
         <script async defer src="js/jquery.prettyPhoto.js"></script>
@@ -58,33 +22,6 @@
         <script async defer src="js/wow.min.js"></script>
         <title>Theo | Home</title>     
     </head><!--/head-->
-    <!-- Modal -->
-              <div class="modal fade" id="loginModal" role="dialog">
-                <div class="modal-dialog">
-
-                  <!-- Modal content-->
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h2 class="modal-title" style="text-align: center"><i class="fa fa-lock"></i> Login To View Restricted Content </h2>
-                    </div>
-                    <div class="modal-body">
-                      <div class="wrapper">
-                          <div id="my-signin2" class="g-signin2"></div><br>
-                          <h3>Don't have access already? Request access below</h3>
-                        <form class="form-signup">    
-                          <input type="text" class="form-control" name="firstname" placeholder="First Name" required="" autofocus=""/>
-                          <input type="text" class="form-control" name="lastname" placeholder="Last Name" required=""/>
-                          <input type="email" class="form-control" name="email" placeholder="Email Address (@gmail.com)" required=""/>     
-                          <button class="btn btn-lg btn-primary btn-block" type="submit">Request Access</button> 
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div><!-- /Modal -->
-
     <body class="homepage" id="page-top">
 
         <header id="header">
@@ -135,11 +72,7 @@
             <div class="container">
                 <div class="center">
                     <h2>Theo Fleck</h2>
-                    <p>Updated=8</p>
-                    <p class="lead">Hi there, my name is Theo Fleck, Head of Software Development for Real Random</p>
-                    <a id="loginButton" onClick="load_modal()" href="#" style="color:black">
-                                        <i class="fa fa-sign-in"></i> Login/Register
-                                        </a>
+                    <p class="lead">Hi there, my name is Theo Fleck, Chief Software Engineer for Real Random</p>
                 </div>
 
                 <div class="row">
