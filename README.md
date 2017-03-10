@@ -1,2 +1,2 @@
 # tfleck.github.io
-My Website
+This is my personal resume website, hosted through Github Pages
