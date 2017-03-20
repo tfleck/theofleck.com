@@ -1,5 +1,7 @@
 // Freelancer Theme JavaScript
-
+$(document).ready(function(){
+    $('iframe#ytvideo').attr('src', 'https://www.youtube.com/embed/L9VBpbnXhWk');    
+});
 (function($) {
     "use strict"; // Start of use strict
 
