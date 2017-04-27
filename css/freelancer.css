@@ -336,6 +336,22 @@ footer .footer-below {
   padding: 25px 0;
   background-color: #233140;
 }
+.btn-download {
+  color: white;
+  font-size: 20px;
+  border: solid 2px white;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  margin-top: 15px;
+}
+.btn-download:hover,
+.btn-download:focus,
+.btn-download:active,
+.btn-download.active {
+  color: #42A5F5;
+  background: white;
+  border: solid 2px white;
+}
 .btn-outline {
   color: #42A5F5;
   font-size: 20px;
