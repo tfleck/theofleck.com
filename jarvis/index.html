@@ -103,7 +103,7 @@
     function getWeather(loc) {
       if(!loc || loc.localeCompare("outside") == 0){
           $.ajax({
-              url: "http://api.openweathermap.org/data/2.5/weather?lat=39.68&lon=-75.75&appid=3951f22e495bc32a769fdd57d9b9f375"
+              url: "https://api.openweathermap.org/data/2.5/weather?lat=39.68&lon=-75.75&appid=3951f22e495bc32a769fdd57d9b9f375"
          }).done(function(data) {
                   var weather = forecastFor(data);
                   console.log(weather);
@@ -114,7 +114,7 @@
         });
       }
       else{
-          var weatherLink = "http://api.openweathermap.org/data/2.5/weather?q="+loc+"&appid=3951f22e495bc32a769fdd57d9b9f375";
+          var weatherLink = "https://api.openweathermap.org/data/2.5/weather?q="+loc+"&appid=3951f22e495bc32a769fdd57d9b9f375";
           $.ajax({
               url: weatherLink
          }).done(function(data) {
