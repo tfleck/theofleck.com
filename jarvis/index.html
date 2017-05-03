@@ -69,7 +69,7 @@
             loadVoices();
     };
     var startPos;
-    window.onload = function() {
+    $(document).ready(function(){
       console.log("getting position");
       var geoSuccess = function(position) {
         startPos = position;
@@ -85,7 +85,7 @@
         //   3: timed out
       };
       navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
-    };
+    });
     function loadVoices() {
         // Fetch the available voices.
         var voices = speechSynthesis.getVoices();
