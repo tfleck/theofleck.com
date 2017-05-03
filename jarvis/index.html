@@ -73,6 +73,23 @@
     window.speechSynthesis.onvoiceschanged = function(e) {
             loadVoices();
     };
+    var startPos;
+    window.onload = function() {
+      var geoSuccess = function(position) {
+        startPos = position;
+        console.log(startPos.coords.latitude);
+        console.log(startPos.coords.longitude);
+      };
+      var geoError = function(error) {
+        console.log('Error occurred. Error code: ' + error.code);
+        // error.code can be:
+        //   0: unknown error
+        //   1: permission denied
+        //   2: position unavailable (error response from location provider)
+        //   3: timed out
+      };
+      navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+    };
     function loadVoices() {
         // Fetch the available voices.
         var voices = speechSynthesis.getVoices();
@@ -93,40 +110,22 @@
         window.speechSynthesis.speak(msg);
     }
     function forecastFor(apiRes) {
-      return fahrenheit(Number(apiRes.main.temp)).toString()+" degrees, and "+(apiRes.weather[0].description);
+      return Number(apiRes.currently.apparentTemperature).toString()+" degrees, and "+(apiRes.minutely.summary);
     }
-
-    function fahrenheit(kelvin) {
-      return Math.round(kelvin * 9/5 - 459.67);
-    }
-
+        
     function getWeather(loc) {
-      if(!loc || loc.localeCompare("outside") == 0){
-          $.ajax({
-              url: "https://api.openweathermap.org/data/2.5/weather?lat=39.68&lon=-75.75&appid=3951f22e495bc32a769fdd57d9b9f375"
+      $.ajax({
+              url: "https://api.darksky.net/forecast/1af980489f41fafa200e38694e73344d/"+startPos.coords.latitude+","+startPos.coords.longitude,
+              dataType: "JSONP"
          }).done(function(data) {
+                  console.log(data);
                   var weather = forecastFor(data);
                   console.log(weather);
-                  speak("Sir, it is "+weather+" in Newark");
+                  speak("Sir, it is "+weather);
                   info(data);
          }).fail(function(jqXHR, textStatus) {
             alert( "Request failed: " + textStatus );
         });
-      }
-      else{
-          var weatherLink = "https://api.openweathermap.org/data/2.5/weather?q="+loc+"&appid=3951f22e495bc32a769fdd57d9b9f375";
-          $.ajax({
-              url: weatherLink
-         }).done(function(data) {
-                  var weather = forecastFor(data);
-                  console.log(weather);
-                  speak("Sir, it is "+weather+" in "+loc);
-                  info(data);
-         }).fail(function(jqXHR, textStatus) {
-            alert( "Request failed: " + textStatus );
-        });
-      
-      }
     }
 
       function kv (k, v) {
