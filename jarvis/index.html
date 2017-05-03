@@ -70,6 +70,7 @@
     };
     var startPos;
     window.onload = function() {
+      console.log("getting position");
       var geoSuccess = function(position) {
         startPos = position;
         console.log(startPos.coords.latitude);
