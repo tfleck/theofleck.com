@@ -70,11 +70,8 @@
     };
     var startPos;
     $(document).ready(function(){
-      console.log("getting position");
       var geoSuccess = function(position) {
         startPos = position;
-        console.log(startPos.coords.latitude);
-        console.log(startPos.coords.longitude);
       };
       var geoError = function(error) {
         console.log('Error occurred. Error code: ' + error.code);
@@ -118,7 +115,7 @@
                   var weather = forecastFor(data);
                   console.log(weather);
                   speak("Sir, it is "+weather);
-                  info(data);
+                  info("Sir, it is "+weather);
          }).fail(function(jqXHR, textStatus) {
             alert( "Request failed: " + textStatus );
         });
