@@ -6,10 +6,10 @@ var mic = new Wit.Microphone(document.getElementById("microphone"));
         document.getElementById("error").innerHTML = msg;
       };
       mic.onready = function () {
-        info("Microphone is ready to record");
+        info("Click the mic to start recording");
       };
       mic.onaudiostart = function () {
-        info("Recording started");
+        info("Recording started, click again to stop");
         error("");
       };
       mic.onaudioend = function () {
@@ -22,9 +22,15 @@ var mic = new Wit.Microphone(document.getElementById("microphone"));
           if (!(e instanceof Array)) {
             r += kv(k, e.value);
             if(k == "intent"){
-                if(e.value == "weather"){
-                    getWeather();
+                if(e.value == "greeting"){
+                    speak("Hello! sir, I am online and ready");
+                    break;
                 }
+                else if(e.value == "weather"){
+                    getWeather();
+                    break;
+                }
+                
             }
             console.log(e.value);
           } else {
@@ -34,7 +40,6 @@ var mic = new Wit.Microphone(document.getElementById("microphone"));
             }
           }
         }
-        document.getElementById("result").innerHTML = r;
       };
       mic.onerror = function (err) {
         error("Error: " + err);
@@ -83,7 +88,8 @@ var mic = new Wit.Microphone(document.getElementById("microphone"));
         msg.rate = 0.9; // 0.1 to 10
         msg.pitch = 1; //0 to 2
         msg.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == "Google UK English Male"; })[0];
-
+        
+        info(text);
       // Queue this utterance.
         window.speechSynthesis.speak(msg);
     }
@@ -100,7 +106,6 @@ var mic = new Wit.Microphone(document.getElementById("microphone"));
                   var weather = forecastFor(data);
                   console.log(weather);
                   speak("Sir, it is "+weather);
-                  info("Sir, it is "+weather);
          }).fail(function(jqXHR, textStatus) {
             alert( "Request failed: " + textStatus );
         });
