@@ -32,20 +32,15 @@
       };
       mic.onresult = function (intent, entities) {
         var r = kv("intent", intent);
-        var loc = null;
         for (var k in entities) {
           var e = entities[k];
-
           if (!(e instanceof Array)) {
             r += kv(k, e.value);
-            if(k == "location"){
-                  loc = e.value;
-              }
-              else if(k == "intent"){
-                  if(e.value == "weather"){
-                      getWeather(loc);
-                  }
-              }
+            if(k == "intent"){
+                if(e.value == "weather"){
+                    getWeather();
+                }
+            }
             console.log(e.value);
           } else {
             for (var i = 0; i < e.length; i++) {
@@ -113,7 +108,7 @@
       return Number(apiRes.currently.apparentTemperature).toString()+" degrees, and "+(apiRes.minutely.summary);
     }
         
-    function getWeather(loc) {
+    function getWeather() {
       $.ajax({
               url: "https://api.darksky.net/forecast/1af980489f41fafa200e38694e73344d/"+startPos.coords.latitude+","+startPos.coords.longitude,
               dataType: "JSONP"
