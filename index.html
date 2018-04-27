@@ -1,394 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!--
-      ________  ____________     ________    ______________ __
-     /_  __/ / / / ____/ __ \   / ____/ /   / ____/ ____/ //_/
-      / / / /_/ / __/ / / / /  / /_  / /   / __/ / /   / ,<
-     / / / __  / /___/ /_/ /  / __/ / /___/ /___/ /___/ /| |
-    /_/ /_/ /_/_____/\____/  /_/   /_____/_____/\____/_/ |_|
-
-    -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Theo Fleck, Co-Founder of Real Random LLC">
+<head id="head">
+    <meta name="description" content="Theo Fleck, Co-Founder of Real Random LLC, Engineer of all the things">
     <meta name="author" content="Theo Fleck">
     <title>Theo Fleck</title>
     <link rel="shortcut icon" href="img/favicon.ico">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Theme CSS -->
-    <link href="css/freelancer.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.0/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.min.css" rel="stylesheet" type="text/css">
 </head>
 
-<body id="page-top" class="index">
-<div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="#page-top"><i class="fa fa-terminal fa-lg"></i>&nbsp;Theo Fleck</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">About Me</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#portfolio">Projects</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#footer">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Header -->
+<body class="bg-dark" data-spy="scroll" data-target=".navbar" data-offset="75">
     <header>
-        <div class="container" id="maincontent" tabindex="-1">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="img/profile.png" alt="">
-                    <div class="intro-text">
-                        <h1 class="name">Theo Fleck</h1>
-                        <hr class="star-light">
-                        <span class="skills">Programmer - Web Developer - Custom PC Builder</span>
-                    </div>
-                    <a href="https://keybase.pub/tfleck/" class="btn btn-lg btn-download">
-                        <i class="fa fa-download"></i> Downloads
-                    </a>
-                </div>
+    <nav class="navbar fixed-top nav-pills navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#head"><i class="fa fa-terminal"></i> Theo Fleck</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="#aboutme">About Me</a>
+                <a class="nav-item nav-link" href="#projects">Projects</a>
+                <a class="nav-item nav-link" href="#contact">Contact</a>
             </div>
         </div>
+    </nav>
     </header>
-
-    <!-- About Section -->
-    <section class="success" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>About Me</h2>
-                    <hr class="line-light">
-                </div>
+    <main role="main">
+        <section class="jumbotron text-center" id="top">
+            <div class="container">
+                <img class="img-responsive" src="img/profile.png" alt="">
+                <h1 class="jumbotron-heading">THEO FLECK</h1>
+                <hr />
+                <p>
+                    Programmer - Web Developer - Systems Engineer
+                </p>
             </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 video">
-                    <div class="embed-responsive embed-responsive-16by9 text-center">
-                        <iframe class="video" id="ytvideo" src="" frameborder="0" allowfullscreen></iframe>
+        </section>
+        <section class="jumbotron text-center" id="aboutme">
+            <div class="container">
+                <h1 class="jumbotron-heading">About Me</h1>
+                <hr />
+                <div class="row align-items-center">
+                    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 offset-sm-1 offset-md-1 offset-lg-1 video">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="video" id="ytvideo" src="" frameborder="0" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
+                <br />
+                <p>I am one of the Co-Founders of <a style="color:#0D47A1" href="https://realrandom.co" target="_blank">Real Random, LLC</a><br>
+                    I am studying Computer Engineering and Cybersecurity at the University of Delaware<br>
+                    I am an Eagle Scout from Troop 152 and a Brotherhood member of the Order of the Arrow<br>
+                    I worked for 3 summers at the Musser Scout Reservation in Pennsburg, PA
+                </p>
             </div>
-            <br>
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                     <p>I am one of the Co-Founders of <a style="color:#0D47A1" href="https://realrandom.co" target="_blank">Real Random, LLC</a><br>
-                        I am studying Computer Engineering and Cybersecurity at the University of Delaware<br>
-                        I am an Eagle Scout from Troop 152 and a Brotherhood member of the Order of the Arrow<br>
-                        I worked for 3 summers at the Musser Scout Reservation in Pennsburg, PA
+        </section>
+        <section id="projects">
+            <div class="album py-5">
+              <div class="container">
+                 <h1 class="jumbotron-heading text-center">Projects</h1>
+                 <hr />
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="img/album/philmont.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text">I went out to Philmont Scout Ranch in Cimarron, NM for a 14-day Order of the Arrow Trail Crew trek including service projects, trail-building, backpacking, and wilderness survival.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="img/album/rigv3.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text">This is my personal desktop rig that I built myself. It's running an i7-4790k, 16GB RAM, a GTX 1080, and a 256GB Samsung 960 boot drive. The system has 480mm of total radiator space which allows it to stay really quiet, even under heavy load.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="img/album/realrandom.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text">I am one of the Co-Founders of Real Random, LLC. Real Random specializes in Non-Deterministic Random Bit Generation. We have developed a way to capture entropy from unpredictable physical sources.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Second Row -->
+                  <div class="col-lg-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="img/album/drone.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text">I won the 2017 UD ECE Autonomous Drone Competition, where we had to program a Raspberry Pi to fly a DJI Matrice 100 drone through a course start to finish with no human intervention.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="img/album/evc.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text">I am the president of the Electric Vehicle Club at UD, working on building an electric FSAE car. The car has a 35kW 3-phase AC motor, and a 148V lithium-ion battery pack capable of driving 500A peak current.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="img/album/minibike.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text">This is the crazy mini bike I built. It's a kit frame with a Harbor Freight Predator 212 engine with upgraded carb jet, emulsion tube, intake, exhaust and 8 degrees of timing advance. Top speed is ~35 mph.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+        <section class="jumbotron text-center" id="contact">
+            <div class="container">
+                <h1 class="jumbotron-heading">Contact</h1>
+                <hr />
+                <div class="row justify-content-center">
+                    <div class="col-md-6" id="btns">
+                        <a href="mailto:me@theofleck.com" target="_blank" class="btn btn-outline btn-circle" title="Email"><i class="fa fa-fw fa-envelope-o"></i></a>
+                        <a href="https://github.com/tfleck?tab=repositories" target="_blank" class="btn btn-outline btn-circle" title="Github"><i class="fa fa-fw fa-github"></i></a>
+                        <a href="https://keybase.io/tfleck" target="_blank" class="btn btn-outline btn-circle" title="Keybase"><i class="fa fa-fw fa-key"></i></a>
+                        <a href="https://www.facebook.com/theo.fleck" target="_blank" class="btn btn-outline btn-circle" title="Facebook"><i class="fa fa-fw fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/theofleck/" target="_blank" class="btn btn-outline btn-circle" title="LinkedIn"><i class="fa fa-fw fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <br />
+                <div class="row justify-content-center">
+                    <p>
+                        "In the end, it's not the years in your life that count, it's the life in your years"
+                        <br> -Abraham Lincoln
                     </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Projects</h2>
-                    <hr class="line-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/philmont.jpg" class="img-responsive" alt="Philmont">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/rigv1.jpg" class="img-responsive" alt="My PC v1">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/rigv2.jpg" class="img-responsive" alt="Circus tent">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/realrandom.jpg" class="img-responsive" alt="Game controller">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/sae.jpg" class="img-responsive" alt="Safe">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/minibike.jpg" class="img-responsive" alt="Submarine">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center" id="footer">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <h2>Contact Me</h2>
-                    <hr class="line-light">
-                    <div class="footer-col col-md-4">
-                        <h3><a href="mailto:me@theofleck.com">me@theofleck.com</a></h3>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <ul class="list-inline">
-                            <li>
-                                <a href="https://keybase.io/tfleck" target="_blank" class="btn-social btn-outline" title="Keybase"><span class="sr-only">Keybase</span><i class="fa fa-fw fa-key"></i></a>
-                            </li>
-                            <li>
-                                <a href="mailto:me@theofleck.com" target="_blank" class="btn-social btn-outline" title="Email"><span class="sr-only">Email</span><i class="fa fa-fw fa-envelope-o"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.facebook.com/theo.fleck" target="_blank" class="btn-social btn-outline" title="Facebook"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/theofleck/" target="_blank" class="btn-social btn-outline" title="LinkedIn"><span class="sr-only">LinkedIn</span><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <p style="color:#42A5F5">"In the end, it's not the years in your life that count, it's the life in your years"
-                            <br> -Abraham Lincoln
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        &copy; Theo Fleck 2017, All Rights Reserved
-                    </div>
-                </div>
-            </div>
-        </div>
+    <footer>
+        <p class="text-center">
+            Copyright &copy; 2018 Theo Fleck, All Rights Reserved
+        </p>
     </footer>
-
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="modal-dialog">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Philmont OA Trail Crew</h2>
-                            <hr class="line-light">
-                            <img src="img/portfolio/philmont.jpg" class="img-responsive img-centered" alt="">
-                            <p>I went out to Philmont in Cimarron, NM for a 14-day trek including service projects, trail-building, backpacking, and wilderness survival</p><br>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="modal-dialog">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>My Rig v1.0</h2>
-                            <hr class="line-light">
-                            <img src="img/portfolio/rigv1.jpg" class="img-responsive img-centered" alt="">
-                            <p>This was my first ever computer build, POSTing for the first time. The build had an Intel i7-4790k with 120mm water cooler and 8GB of RAM on an ASUS Maximus VII Hero Motherboard. It had a 1TB WD Blue HDD and a 750W PSU all in a Fractal Design Define R4. Later, I added a 120GB SSD boot drive and an MSI GTX 660 pixel pusher.</p><br>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="modal-dialog">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>My Rig v2.0</h2>
-                            <hr class="line-light">
-                            <img src="img/portfolio/rigv2.jpg" class="img-responsive img-centered" alt="">
-                            <p>For v2.0, I wasn't messing around. I used the same Intel i7-4790k as before, now custom water cooled. The water loop also contains a EVGA GTX 970 Superclocked pixel pusher with an EK Water Block. RAM went up to 16GB, and all of it's on an ASRock Z97M Motherboard. It's powered by a 500W modular passive power supply, and has the same 120GB SSD boot drive. The water loop consists of a Swiftech H220X mounted backwards, the extra 120mm radiator on the bottom, the GTX 970's EK waterblock and chrome compression fittings all around. All of this is packed into a Bitfenix Prodigy M</p><br>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="modal-dialog">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Real Random, LLC</h2>
-                            <hr class="line-light">
-                            <img src="img/portfolio/realrandom.jpg" class="img-responsive img-centered" alt="">
-                            <p>I am one of the Co-Founders of Real Random, LLC. Real Random specializes in Non-Deterministic Random Bit Generation. We have developed a way to capture entropy from unpredictable physical sources.</p><br>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="modal-dialog">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>UDel Racing</h2>
-                            <hr class="line-light">
-                            <img src="img/portfolio/sae.jpg" class="img-responsive img-centered" alt="">
-                            <p>I'm the Vice President of the Electric Vehicle Club, and a member of Formula SAE at University of Delaware. This picture is of one of the old FSAE cars.</p><br>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="modal-dialog">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>212cc Mini Bike</h2>
-                            <hr class="line-light">
-                            <img src="img/portfolio/minibike.jpg" class="img-responsive img-centered" alt="">
-                            <p>This is the crazy mini bike I built. It's a kit frame with a Harbor Freight Predator 212 engine driving it. The 212 has gotten a full stage 1 kit including carb jet, emulsion tube, intake, exhaust and 8 degrees of timing advance. The 212 makes a little over 7.5 HP now. I reduced the gearing in the back to help stop the wheelies, and now it'll do ~35 mph.</p><br>
-                            <button id="btnSubmit" type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <!-- Theme JavaScript -->
-    <script async src="js/freelancer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.0/dist/js/bootstrap.min.js"></script>
+    <script async src="js/main.min.js"></script>
 </body>
 </html>
