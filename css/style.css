@@ -15,11 +15,9 @@ nav.navbar.shrink .navbar-brand{
 body{
     font-size: 16px;
 }
-@media (max-width: 992px) {
-    body{font-size: 18px;}
-}
-@media (max-width: 768px){
-    body{font-size: 20px;}
+
+@media screen and (max-width: 992px) {
+    body{font-size: 15px;}
 }
 section {
     box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
@@ -71,12 +69,10 @@ footer p{
     color: #2597f4;
     transition: all ease .3s;
 }
-
 .navbar-dark .navbar-nav .nav-link.active:hover{
     color: #fff;
     background-color: #2597f4;
 }
-
 .jumbotron{
     margin-bottom: 0px;
     border-radius: 0px;
@@ -92,6 +88,9 @@ footer p{
 .card{
     border: 0px;
     border-radius: 5px;
+}
+.card-text{
+    font-size: 1.2em;
 }
 .card-img-top{
     border-top-left-radius: 5px;
@@ -125,6 +124,9 @@ footer p{
 #aboutme {
     background-color: #159e82;
 }
+#aboutme p{
+    font-size: 1.4em;
+}
 #projects{
     background: url(../img/top_right.svg) repeat left bottom, #0077c2;
 }
@@ -140,7 +142,7 @@ footer p{
 }
 #contact p{
     color: #2597f4;
-    font-size: 2.08em;
+    font-size: 1.8em;
 }
 #btns a{
     margin-left: 0.63em;
