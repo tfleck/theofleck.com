@@ -1,5 +1,6 @@
 /* Elements */
 nav.navbar{
+    padding-top:10px;
     padding-left:30px;
     padding-right:30px;
     font-size: 18px;
@@ -31,7 +32,7 @@ a:hover{
     color: #2597f4;
 }
 p{
-    font-size:16px;
+    font-size: 1.2em;
 }
 footer{
     color: #fff;
@@ -73,10 +74,11 @@ footer p{
     color:#fff;
 }
 .jumbotron p {
-    font-size: 20px;
+    font-size: 1.3em;
 }
 .video{
-    max-height:500px;
+    max-height: 641px;
+    max-width: 1140px;
 }
 .card{
     border: 0px;
@@ -101,18 +103,18 @@ footer p{
 /* IDs */
 #top {
     background: url(../img/top_right.svg) repeat left bottom,#0077c2;
-    margin-top :75px;
+    margin-top: 85px;
 }
 #top h1{
-    padding-top: 10px;
-    font-size: 65px;
+    padding-top: 0.8em;
+    font-size: 5.42em;
 }
 #top p{
-    font-size: 25px;
+    font-size: 2.08em;
     font-weight: 300;
 }
 #aboutme {
-    background-color:#159e82;
+    background-color: #159e82;
 }
 #projects{
     background: url(../img/top_right.svg) repeat left bottom, #0077c2;
@@ -120,17 +122,17 @@ footer p{
 #contact {
     background-color: #2c3e50;
 }
-#contact .col-md-4{
-    padding-top:10px;
-    padding-bottom:10px;
+#contact .col-lg-6{
+    padding-top: 0.63em;
+    padding-bottom: 0.63em;
 }
 #contact a{
     font-size: 25px;
 }
 #contact p{
     color: #2597f4;
-    font-size: 25px;
+    font-size: 2.08em;
 }
 #btns a{
-    margin-left: 10px;
+    margin-left: 0.63em;
 }
