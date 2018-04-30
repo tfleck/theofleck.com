@@ -1,6 +1,12 @@
-//Populate youtube video after DOM loaded
+//Populate heavy items after DOM loaded
 $(document).ready(function(){
     $('iframe#ytvideo').attr('src', 'https://www.youtube-nocookie.com/embed/L9VBpbnXhWk?rel=0');
+    $('#album1').attr('src','img/album/philmont.jpg');
+    $('#album2').attr('src','img/album/rigv3.jpg');
+    $('#album3').attr('src','img/album/realrandom.jpg');
+    $('#album4').attr('src','img/album/drone.jpg');
+    $('#album5').attr('src','img/album/evc.jpg');
+    $('#album6').attr('src','img/album/minibike.jpg');
 });
 //Shrink navbar on scroll
 $(window).scroll(function() {
