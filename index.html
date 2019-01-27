@@ -1,152 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head id="head">
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="Theo Fleck, Co-Founder of Real Random LLC, Engineer of all the things">
-    <meta name="author" content="Theo Fleck">
-    <title>Theo Fleck</title>
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.0/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/style.min.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width" />
+  <meta name="description" content="Theo Fleck, Co-Founder of Real Random LLC, Engineer of all the things">
+  <meta name="author" content="Theo Fleck">
+  <title>Theo Fleck</title>
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <!-- CSS/JS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.0/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.2.1/dist/jquery.min.js,npm/bootstrap@4.1.0/dist/js/bootstrap.min.js"></script>
+  <link href="css/style.min.css" rel="stylesheet" type="text/css">
 </head>
+
 <body class="bg-dark" data-spy="scroll" data-target=".navbar" data-offset="75">
-    <header>
+  <header>
     <nav class="navbar fixed-top nav-pills navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#head"><i class="fa fa-terminal"></i> Theo Fleck</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#head"><i class="fa fa-terminal"></i> Theo Fleck</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link" href="#aboutme">About Me</a>
-                <a class="nav-item nav-link" href="#projects">Projects</a>
-                <a class="nav-item nav-link" href="#contact">Contact</a>
-            </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link" href="#aboutme">About Me</a>
+          <a class="nav-item nav-link" href="#projects">Projects</a>
+          <a class="nav-item nav-link" href="#contact">Contact</a>
         </div>
+      </div>
     </nav>
-    </header>
-    <main role="main">
-        <section class="jumbotron text-center" id="top">
-            <div class="container-fluid">
-                <img class="img-responsive" src="img/profile.png" alt="">
-                <h1 class="jumbotron-heading">THEO FLECK</h1>
-                <hr />
-                <p>
-                    Programmer - Web Developer - Systems Engineer
-                </p>
+  </header>
+  <main role="main">
+    <section class="jumbotron text-center" id="top">
+      <div class="container-fluid">
+        <img class="img-responsive" src="img/profile.png" alt="">
+        <h1 class="jumbotron-heading">THEO FLECK</h1>
+        <hr />
+        <p>
+          Systems Engineer - Web Developer - Programmer
+        </p>
+      </div>
+    </section>
+    <section class="jumbotron text-center" id="aboutme">
+      <div class="container-fluid justify-content-center">
+        <h1 class="jumbotron-heading">About Me</h1>
+        <hr />
+        <div class="row justify-content-center">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 video">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="video" id="ytvideo" src="" frameborder="0" allowfullscreen></iframe>
             </div>
-        </section>
-        <section class="jumbotron text-center" id="aboutme">
-            <div class="container-fluid justify-content-center">
-                <h1 class="jumbotron-heading">About Me</h1>
-                <hr />
-                <div class="row justify-content-center">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 video">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="video" id="ytvideo" src="" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                <br />
-                <p>I am one of the Co-Founders of <a style="color:#0D47A1" href="https://realrandom.co" target="_blank">Real Random, LLC</a></p>
-                <p>I am studying Computer Engineering and Cybersecurity at the University of Delaware</p>
-                <p>I am an Eagle Scout from Troop 152 and a Brotherhood member of the Order of the Arrow</p>
-                <p>I worked for 3 summers at the Musser Scout Reservation in Pennsburg, PA</p>
-            </div>
-        </section>
-        <section id="projects">
-            <div class="album py-5">
-              <div class="container">
-                 <h1 class="jumbotron-heading text-center">Projects</h1>
-                 <hr />
-                <div class="row">
-                  <div class="col-lg-4">
-                    <div class="card mb-4 box-shadow">
-                      <img class="card-img-top" src="" alt="Card image cap" id="album1">
-                      <div class="card-body">
-                        <p class="card-text">I went out to Philmont Scout Ranch in Cimarron, NM for a 14-day Order of the Arrow Trail Crew trek including service projects, trail-building, backpacking, and wilderness survival.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="card mb-4 box-shadow">
-                      <img class="card-img-top" src="" alt="Card image cap" id="album2">
-                      <div class="card-body">
-                        <p class="card-text">This is my personal desktop rig that I built myself. It's running an i7-4790k, 16GB RAM, a GTX 1080, and a 256GB Samsung 960 boot drive. The system has 480mm of total radiator space which allows it to stay really quiet, even under heavy load.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="card mb-4 box-shadow">
-                      <img class="card-img-top" src="" alt="Card image cap" id="album3">
-                      <div class="card-body">
-                        <p class="card-text">I am one of the Co-Founders of Real Random, LLC. Real Random specializes in Non-Deterministic Random Bit Generation. We have developed a way to capture entropy from unpredictable physical sources.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Second Row -->
-                  <div class="col-lg-4">
-                    <div class="card mb-4 box-shadow">
-                      <img class="card-img-top" src="" alt="Card image cap" id="album4">
-                      <div class="card-body">
-                        <p class="card-text">I won the 2017 UD ECE Autonomous Drone Competition, where we had to program a Raspberry Pi to fly a DJI Matrice 100 drone through a course start to finish with no human intervention.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="card mb-4 box-shadow">
-                      <img class="card-img-top" src="" alt="Card image cap" id="album5">
-                      <div class="card-body">
-                        <p class="card-text">I am the president of the Electric Vehicle Club at UD, working on building an electric FSAE car. The car has a 35kW 3-phase AC motor, and a 148V lithium-ion battery pack capable of driving 500A peak current.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="card mb-4 box-shadow">
-                      <img class="card-img-top" src="" alt="Card image cap" id="album6">
-                      <div class="card-body">
-                        <p class="card-text">This is the crazy mini bike I built. It's a kit frame with a Harbor Freight Predator 212 engine with upgraded carb jet, emulsion tube, intake, exhaust and 8 degrees of timing advance. Top speed is ~35 mph.</p>
-                      </div>
-                    </div>
-                  </div>
+          </div>
+        </div>
+        <br />
+        <p>I am the Assistant Lab Manager for the Electrical and Computer Engineering Department at UD </p>
+        <p>I am studying Computer Engineering and Cybersecurity at the University of Delaware</p>
+        <p>I was one of the Co-Founders of <a style="color:#0D47A1" href="https://realrandom.co" target="_blank">Real Random, LLC</a></p>
+        <p>I am an Eagle Scout from Troop 152 and a Brotherhood member of the Order of the Arrow</p>
+        <p>I worked for 3 summers at the Musser Scout Reservation in Pennsburg, PA</p>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="album py-5">
+        <div class="container">
+          <h1 class="jumbotron-heading text-center">Projects</h1>
+          <hr />
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="" alt="Card image cap" id="album1">
+                <div class="card-body">
+                  <p class="card-text">I went out to Philmont Scout Ranch in Cimarron, NM for a 14-day Order of the Arrow Trail Crew trek including service projects, trail-building, backpacking, and wilderness survival.</p>
                 </div>
               </div>
             </div>
-        </section>
-        <section class="jumbotron text-center" id="contact">
-            <div class="container-fluid">
-                <h1 class="jumbotron-heading">Contact</h1>
-                <hr />
-                <div class="row justify-content-center">
-                    <div class="col-lg-6" id="btns">
-                        <a href="mailto:me@theofleck.com" target="_blank" class="btn btn-outline btn-circle" title="Email"><i class="fa fa-fw fa-envelope-o"></i></a>
-                        <a href="https://github.com/tfleck?tab=repositories" target="_blank" class="btn btn-outline btn-circle" title="Github"><i class="fa fa-fw fa-github"></i></a>
-                        <a href="https://keybase.io/tfleck" target="_blank" class="btn btn-outline btn-circle" title="Keybase"><i class="fa fa-fw fa-key justify-content-center"></i></a>
-                        <a href="https://www.facebook.com/theo.fleck" target="_blank" class="btn btn-outline btn-circle" title="Facebook"><i class="fa fa-fw fa-facebook"></i></a>
-                        <a href="https://www.linkedin.com/in/theofleck/" target="_blank" class="btn btn-outline btn-circle" title="LinkedIn"><i class="fa fa-fw fa-linkedin"></i></a>
-                    </div>
+            <div class="col-lg-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="" alt="Card image cap" id="album2">
+                <div class="card-body">
+                  <p class="card-text">This is my personal desktop rig that I built myself. It's running an i7-4790k, 16GB RAM, a GTX 1080, and a 256GB Samsung 960 boot drive. The system has 480mm of total radiator space which keeps everything cool.</p>
                 </div>
-                <br />
-                <div class="row justify-content-center">
-                    <p>
-                        "In the end, it's not the years in your life that count, it's the life in your years"
-                        <br> -Abraham Lincoln
-                    </p>
-                </div>
+              </div>
             </div>
-        </section>
-    </main>
-    <footer>
-        <p class="text-center">
-            Copyright &copy; 2018 Theo Fleck, All Rights Reserved
-        </p>
-    </footer>
-    <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"></noscript>
-    <!-- JS -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.0/dist/js/bootstrap.min.js"></script>
-    <script src="js/main.min.js"></script>
+            <div class="col-lg-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="" alt="Card image cap" id="album3">
+                <div class="card-body">
+                  <p class="card-text">I led a 225 man hour eagle scout project at the Medal of Honor Grove, restoring the Nevada & Kentucky acres. You can read more <a target="_blank" href="https://www.friendsmohgrove.org/eagle-scout-projects.html">here.</a></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="col-lg-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="" alt="Card image cap" id="album4">
+                <div class="card-body">
+                  <p class="card-text">I won the 2017 UD ECE Autonomous Drone Competition, where we had to program a Raspberry Pi to fly a DJI Matrice 100 drone through a course start to finish with no human intervention.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="" alt="Card image cap" id="album5">
+                <div class="card-body">
+                  <p class="card-text">I am the president of the Electric Vehicle Club at UD, working on building an electric FSAE car. The car has a 35kW 3-phase AC motor, and a 148V lithium-ion battery pack capable of driving 500A peak current.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="" alt="Card image cap" id="album6">
+                <div class="card-body">
+                  <p class="card-text">This is the crazy mini bike I built. It's a kit frame with a Harbor Freight Predator 212 engine with upgraded carb jet, emulsion tube, intake, exhaust and 8 degrees of timing advance. Top speed is ~35 mph.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Third Row -->
+            <div class="col-lg-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="" alt="Card image cap" id="album7">
+                <div class="card-body">
+                  <p class="card-text">I am one of the Co-Founders of Real Random, LLC. Real Random specializes in Non-Deterministic Random Bit Generation. We have developed a way to capture entropy from unpredictable physical sources.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="" alt="Card image cap" id="album8">
+                <div class="card-body">
+                  <p class="card-text">I am working on a research project to develop wearable devices for Parkinson's patients to help with tremors and freezing of gait.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="" alt="Card image cap" id="album9">
+                <div class="card-body">
+                  <p class="card-text">I am designing and building the ultimate portable system diagnosis tool, for a BOM cost of $100</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="jumbotron text-center" id="contact">
+      <div class="container-fluid">
+        <h1 class="jumbotron-heading">Contact</h1>
+        <hr />
+        <div class="row justify-content-center">
+          <div class="col-lg-6" id="btns">
+            <a href="mailto:me@theofleck.com" target="_blank" class="btn btn-outline btn-circle" title="Email"><i class="fa fa-fw fa-envelope-o"></i></a>
+            <a href="https://github.com/tfleck?tab=repositories" target="_blank" class="btn btn-outline btn-circle" title="Github"><i class="fa fa-fw fa-github"></i></a>
+            <a href="https://keybase.io/tfleck" target="_blank" class="btn btn-outline btn-circle" title="Keybase"><i class="fa fa-fw fa-key justify-content-center"></i></a>
+            <a href="https://www.facebook.com/theo.fleck" target="_blank" class="btn btn-outline btn-circle" title="Facebook"><i class="fa fa-fw fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/theofleck/" target="_blank" class="btn btn-outline btn-circle" title="LinkedIn"><i class="fa fa-fw fa-linkedin"></i></a>
+          </div>
+        </div>
+        <br />
+        <div class="row justify-content-center">
+          <p>
+            "In the end, it's not the years in your life that count, it's the life in your years"
+            <br> -Abraham Lincoln
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p class="text-center">
+      Copyright &copy;
+      <script type="text/JavaScript">document.write(new Date().getFullYear());</script>
+      Theo Fleck, All Rights Reserved
+    </p>
+  </footer>
+  <!-- CSS/JS -->
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"></noscript>
+  <script src="js/main.min.js"></script>
 </body>
+
 </html>
