@@ -8,8 +8,8 @@ $(window).on("load", function() {
   $('#album5').attr('src', 'img/album/evc.png');
   $('#album6').attr('src', 'img/album/minibike.png');
   $('#album7').attr('src', 'img/album/realrandom.png');
-  $('#album8').attr('src', 'img/album/board.jpg');
-  $('#album9').attr('src', 'img/album/debugdisplay.jpg');
+  $('#album8').attr('src', 'img/album/shoe.jpg');
+  $('#album9').attr('src', 'img/album/398project.jpg');
 });
 //Shrink navbar on scroll
 $(window).scroll(function() {
