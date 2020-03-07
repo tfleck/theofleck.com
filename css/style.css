@@ -69,6 +69,9 @@ footer p{
     color: #fff;
     background-color: #2597f4;
 }
+.top-section{
+    margin-top: 85px;
+}
 .jumbotron{
     margin-bottom: 0px;
     border-radius: 0px;
@@ -103,11 +106,15 @@ footer p{
     background-color: #2597f4;
     color: #fff;
 }
+.inspire-link {
+    color:#fff;
+    font-weight:350;
+    font-size:1.4em;
+}
 
 /* IDs */
 #top {
-    background: url(../img/top_right.svg) repeat left bottom,#0077c2;
-    margin-top: 85px;
+    background: url(/img/top_right.svg) repeat left bottom,#0077c2;
 }
 #top h1{
     padding-top: 0.8em;
@@ -125,7 +132,7 @@ footer p{
     margin-bottom: 0px;
 }
 #projects{
-    background: url(../img/top_right.svg) repeat left bottom, #0077c2;
+    background: url(/img/top_right.svg) repeat left bottom, #0077c2;
 }
 #contact {
     background-color: #2c3e50;
@@ -147,4 +154,22 @@ footer p{
 @media screen and (max-width: 992px) {
     body{font-size: 14px;}
     #aboutme p{margin-bottom: 12px;}
+}
+
+#inspire {
+    background-color: #026dafcb;
+}
+
+#inspire .card {
+    border-radius: 10px;
+}
+
+#inspire iframe {
+    border-radius: 10px;
+}
+
+#inspire-heading {
+    font-size:1.4em;
+    text-align:center!important;
+    color:#fff;
 }

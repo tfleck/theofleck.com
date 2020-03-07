@@ -7,11 +7,10 @@
   <meta name="description" content="Theo Fleck - Eagle scout, maker, and engineer of all the things">
   <meta name="author" content="Theo Fleck">
   <title>Theo Fleck</title>
-  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="shortcut icon" href="/img/favicon.ico">
   <!-- CSS/JS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.0/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.2.1/dist/jquery.min.js,npm/bootstrap@4.1.0/dist/js/bootstrap.min.js"></script>
-  <link href="css/style.min.css" rel="stylesheet" type="text/css">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="bg-dark" data-spy="scroll" data-target=".navbar" data-offset="75">
@@ -26,12 +25,13 @@
           <a class="nav-item nav-link" href="#aboutme">About</a>
           <a class="nav-item nav-link" href="#projects">Projects</a>
           <a class="nav-item nav-link" href="#contact">Contact</a>
+          <a class="nav-item nav-link" href="/inspiration">Inspiration</a>
         </div>
       </div>
     </nav>
   </header>
   <main role="main">
-    <section class="jumbotron text-center" id="top">
+    <section class="jumbotron text-center top-section" id="top">
       <div class="container-fluid">
         <img class="img-responsive" src="img/profile.png" alt="">
         <h1 class="jumbotron-heading">THEO FLECK</h1>
@@ -53,10 +53,9 @@
           </div>
         </div>
         <br />
-        <p>I am working on <a style="color:#0D47A1" href="https://www.nbcphiladelphia.com/news/tech/Team-Uses-High-Tech-Device-to-Combat-Parkinson_s-Disease_Philadelphia-506784522.html" target="_blank">vibration therapy devices</a> for people with Parkinson's Disease</p>
-        <p>I am working on computer vision software to analyze patterns on biological test strips</p>
+        <p>I am an Innovation Engineer at W.L. Gore & Associates</p>
+        <p>I worked on <a style="color:#0D47A1" href="https://www.nbcphiladelphia.com/news/tech/Team-Uses-High-Tech-Device-to-Combat-Parkinson_s-Disease_Philadelphia-506784522.html" target="_blank">vibration therapy devices</a> for people with Parkinson's Disease</p>
         <p>I am studying Computer Engineering and Cybersecurity at the University of Delaware</p>
-        <p>I interned at W.L. Gore &amp; Associates in Information Security and Digital Prototyping</p>
         <p>I was one of the Co-Founders of <a style="color:#0D47A1" href="https://realrandom.co" target="_blank">Real Random, LLC</a></p>
         <p>I am an Eagle Scout from Troop 152 and a Brotherhood member of the Order of the Arrow</p>
       </div>
@@ -67,6 +66,7 @@
           <h1 class="jumbotron-heading text-center">Projects</h1>
           <hr />
           <div class="row">
+            <!-- First Row -->
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="" alt="Card image cap" id="album1">
@@ -79,7 +79,7 @@
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="" alt="Card image cap" id="album2">
                 <div class="card-body">
-                  <p class="card-text">This is my personal desktop rig that I built myself. It's running an i7-4790k, 16GB RAM, a GTX 1080, and a 1TB NVMe boot drive. The system has 480mm of total radiator space which keeps everything cool.</p>
+                  <p class="card-text">This is my personal desktop rig that I built. It's running an i7-4790k, 16GB RAM, a GTX 1080, and a 1TB NVMe boot drive. The system has 480mm of total radiator space which keeps everything cool.</p>
                 </div>
               </div>
             </div>
@@ -104,7 +104,7 @@
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="" alt="Card image cap" id="album8">
                 <div class="card-body">
-                  <p class="card-text">I am working on a research project to develop wearable devices for Parkinson's patients to help with tremors and freezing of gait. You can <a target="_blank" href="https://www.nbcphiladelphia.com/news/tech/Team-Uses-High-Tech-Device-to-Combat-Parkinson_s-Disease_Philadelphia-506784522.html">watch the NBC story here</a>, or <a target="_blank" href="https://www.udel.edu/udaily/2019/march/resonate-forward-startup-parkinsons-device/">read the UDaily article here.</a></p>
+                  <p class="card-text">I worked on a research project to develop wearable devices for Parkinson's patients to help with tremors and freezing of gait. You can <a target="_blank" href="https://www.nbcphiladelphia.com/news/tech/Team-Uses-High-Tech-Device-to-Combat-Parkinson_s-Disease_Philadelphia-506784522.html">watch the NBC story here</a>, or <a target="_blank" href="https://www.udel.edu/udaily/2019/march/resonate-forward-startup-parkinsons-device/">read the UDaily article here.</a></p>
                 </div>
               </div>
             </div>
@@ -129,7 +129,7 @@
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="" alt="Card image cap" id="album5">
                 <div class="card-body">
-                  <p class="card-text">I am the president of the Electric Vehicle Club at UD, working on building an electric FSAE car. The car has a 35kW 3-phase AC motor, and a 148V lithium-ion battery pack capable of driving 500A peak current.</p>
+                  <p class="card-text">I was the president of the Electric Vehicle Club at UD, working on building an electric FSAE car. The car has a 35kW 3-phase AC motor, and a 148V lithium-ion battery pack capable of driving 500A peak current.</p>
                 </div>
               </div>
             </div>
@@ -178,8 +178,9 @@
     </p>
   </footer>
   <!-- CSS/JS -->
+  <script defer src="https://cdn.jsdelivr.net/combine/npm/jquery@3.2.1/dist/jquery.min.js,npm/bootstrap@4.1.0/dist/js/bootstrap.min.js"></script>
+  <script defer src="/js/main.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"></noscript>
-  <script src="js/main.min.js"></script>
 </body>
 
 </html>
