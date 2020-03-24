@@ -33,7 +33,7 @@ $(window).scroll(function() {
 });
 // Add smooth scrolling on all links inside the navbar
 $("nav a").on('click', function(event) {
-  if (this.hash !== "") {
+  if (this.hash != null && this.hash !== "" && $(this.hash).length > 0) {
     event.preventDefault();
     var hash = this.hash;
     $('html, body').animate({
