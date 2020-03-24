@@ -1,5 +1,7 @@
 //Populate heavy items after DOM loaded
 $(document).ready( function() {
+  //higher res profile picture
+  $('#profile-img').attr('src', '/img/profile.png');
   // about me iframe
   $('iframe#ytvideo').attr('src', 'https://www.youtube-nocookie.com/embed/L9VBpbnXhWk?rel=0');
   // projects album
