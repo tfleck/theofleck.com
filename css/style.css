@@ -1,3 +1,17 @@
+/* Global */
+* {
+    font-display: swap;
+}
+
+/* Font Awesome speed tweak */
+.fa {
+    display: none;
+ }
+ 
+body.fontawesome-loaded .fa {
+    display: initial; /* may not work in IE, use inline-block / block instead */
+}
+
 /* Elements */
 nav.navbar{
     padding-top:10px;

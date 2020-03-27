@@ -7,17 +7,13 @@
   <meta name="description" content="Theo Fleck - Eagle scout, maker, and engineer of all the things">
   <meta name="author" content="Theo Fleck">
   <title>Theo Fleck</title>
-  <link rel="shortcut icon" href="/img/favicon.ico">
-  <!-- CSS/JS -->
-  <link href="https://cdn.jsdelivr.net/combine/npm/bootstrap@4/dist/css/bootstrap.min.css,npm/shards-ui@3/dist/css/shards.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,300" rel="stylesheet" type="text/css">
-  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />  
 </head>
 
 <body class="bg-dark" data-spy="scroll" data-target=".navbar" data-offset="75">
   <header>
     <nav class="navbar fixed-top nav-pills navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#head"><i class="fa fa-terminal"></i> Theo Fleck</a>
+      <a class="navbar-brand" href="#head"><i class="fas fa-terminal"></i> Theo Fleck</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,11 +30,16 @@
   <main role="main">
     <section class="jumbotron text-center top-section" id="top">
       <div class="container-fluid">
-        <img class="img-responsive" id="profile-img" src="img/profile-small.png" alt="">
+        <picture>
+          <source id="profile-override">
+          <source type="image/webp" srcset="/img/profile-small.webp">
+          <img class="img-responsive" id="profile-img" src="/img/profile-small.png" alt="">
+        </picture>
+        
         <h1 class="section-heading">Theo Fleck</h1>
         <hr />
         <h3>
-          Computer Engineer &bull; Maker &bull; Web Developer
+          Engineer &bull; Maker &bull; Developer
         </h3>
       </div>
     </section>
@@ -46,9 +47,9 @@
       <div class="container-fluid justify-content-center">
         <h1 class="section-heading">About Me</h1>
         <hr />
-        <p>I am an Innovation Engineer at W.L. Gore & Associates</p>
-        <p>I am studying Computer Engineering and Cybersecurity at the University of Delaware</p>
-        <p>I am an Eagle Scout from Troop 152 and a Brotherhood member of the Order of the Arrow</p>
+        <p>Innovation Engineer at W.L. Gore & Associates</p>
+        <p>Studying Computer Engineering and Cybersecurity at the University of Delaware</p>
+        <p>Eagle Scout from Troop 152 and a Brotherhood member of the Order of the Arrow</p>
         <br>
         <div class="row justify-content-center">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 video">
@@ -67,7 +68,7 @@
             <!-- First Row -->
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="" alt="Card image cap" id="album1">
+                <img class="card-img-top lazy" data-src="/img/album/philmont.png">
                 <div class="card-body">
                   <h4 class="card-title">Philmont</h4>
                   <p class="card-text">I went out to Philmont Scout Ranch in Cimarron, NM for a 14-day Order of the Arrow Trail Crew trek including service projects, trail-building, backpacking, and wilderness survival.</p>
@@ -76,7 +77,7 @@
             </div>
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="" alt="Card image cap" id="album8">
+                <img class="card-img-top lazy" data-src="/img/album/shoe.jpg">
                 <div class="card-body">
                   <h4 class="card-title">Resonate Forward</h4>
                   <p class="card-text">I worked on a research project to develop wearable devices for Parkinson's patients to help with tremors and freezing of gait. You can <a target="_blank" href="https://www.nbcphiladelphia.com/news/tech/Team-Uses-High-Tech-Device-to-Combat-Parkinson_s-Disease_Philadelphia-506784522.html">watch the NBC story here</a>, or <a target="_blank" href="https://www.udel.edu/udaily/2019/march/resonate-forward-startup-parkinsons-device/">read the UDaily article here.</a></p>
@@ -85,7 +86,7 @@
             </div>
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="" alt="Card image cap" id="album3">
+                <img class="card-img-top lazy" data-src="/img/album/eagleproject.jpg">
                 <div class="card-body">
                   <h4 class="card-title">Eagle Scout</h4>
                   <p class="card-text">I led a 225 man hour eagle scout project at the Medal of Honor Grove, restoring the Nevada & Kentucky acres. You can <a target="_blank" href="https://www.flickr.com/photos/170165324@N05/albums/72157708781877798/with/47942129642/">see more here.</a></p>
@@ -95,7 +96,7 @@
             <!-- Second Row -->
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="" alt="Card image cap" id="album2">
+                <img class="card-img-top lazy" data-src="/img/album/rigv3.png">
                 <div class="card-body">
                   <h4 class="card-title">Custom Desktop</h4>
                   <p class="card-text">This is my personal desktop rig that I built. It's running an i7-4790k, 16GB RAM, a GTX 1080, and a 1TB NVMe boot drive. The system has 480mm of total radiator space which keeps everything cool.</p>
@@ -104,7 +105,7 @@
             </div>
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="" alt="Card image cap" id="album9">
+                <img class="card-img-top lazy" data-src="/img/album/398project.jpg">
                 <div class="card-body">
                   <h4 class="card-title">Junior Design</h4>
                   <p class="card-text">I designed and built a wearable monitor for harmful environmental conditions. It monitors UV light, VOCs, temperature, humidity, sound level, and magnetic fields.</p>
@@ -113,7 +114,7 @@
             </div>
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="" alt="Card image cap" id="album7">
+                <img class="card-img-top lazy" data-src="/img/album/realrandom.png">
                 <div class="card-body">
                   <h4 class="card-title">Real Random</h4>
                   <p class="card-text">I was one of the Co-Founders of <a target="_blank" href="https://realrandom.co">Real Random, LLC</a>. Real Random specializes in Non-Deterministic Random Bit Generation. We have developed a way to capture entropy from unpredictable physical sources.</p>
@@ -123,7 +124,7 @@
             <!-- Third Row -->
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="" alt="Card image cap" id="album4">
+                <img class="card-img-top lazy" data-src="/img/album/drone.png">
                 <div class="card-body">
                   <h4 class="card-title">Autonomous Drones</h4>
                   <p class="card-text">I won the 2017 UD ECE Autonomous Drone Competition, where we had to program a Raspberry Pi to fly a DJI Matrice 100 drone through a course start to finish with no human intervention. You can <a target="_blank" href="https://www.ece.udel.edu/news/2017/drone-competition/">read the article here.</a></p>
@@ -132,7 +133,7 @@
             </div>
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="" alt="Card image cap" id="album5">
+                <img class="card-img-top lazy" data-src="/img/album/evc.png">
                 <div class="card-body">
                   <h4 class="card-title">Electric Vehicles</h4>
                   <p class="card-text">I was the president of the Electric Vehicle Club at UD, working on building an electric FSAE car. The car has a 35kW 3-phase AC motor, and a 148V lithium-ion battery pack capable of driving 500A peak current.</p>
@@ -141,7 +142,7 @@
             </div>
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="" alt="Card image cap" id="album6">
+                <img class="card-img-top lazy" data-src="/img/album/minibike.png">
                 <div class="card-body">
                   <h4 class="card-title">Mini Bike</h4>
                   <p class="card-text">This is the crazy mini bike I built. It's a kit frame with a Harbor Freight Predator 212 engine with upgraded carburetor jet, emulsion tube, intake, exhaust, and 8 degrees of timing advance. The top speed is ~35 mph.</p>
@@ -157,11 +158,11 @@
         <hr />
         <div class="row justify-content-center">
           <div class="col-lg-6" id="btns">
-            <a href="mailto:me@theofleck.com" target="_blank" class="btn btn-outline btn-circle" title="Email"><i class="fa fa-fw fa-envelope-o"></i></a>
-            <a href="https://github.com/tfleck" target="_blank" class="btn btn-outline btn-circle" title="Github"><i class="fa fa-fw fa-github"></i></a>
-            <a href="https://www.facebook.com/theo.fleck" target="_blank" class="btn btn-outline btn-circle" title="Facebook"><i class="fa fa-fw fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/in/theofleck/" target="_blank" class="btn btn-outline btn-circle" title="LinkedIn"><i class="fa fa-fw fa-linkedin"></i></a>
-            <a href="https://keybase.io/tfleck" target="_blank" class="btn btn-outline btn-circle" title="Keybase"><i class="fa fa-fw fa-key justify-content-center"></i></a>
+            <a href="mailto:me@theofleck.com" target="_blank" class="btn btn-outline btn-circle" title="Email"><i class="far fa-envelope"></i></a>
+            <a href="https://github.com/tfleck" target="_blank" class="btn btn-outline btn-circle" title="Github"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/theo.fleck" target="_blank" class="btn btn-outline btn-circle" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/theofleck/" target="_blank" class="btn btn-outline btn-circle" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://keybase.io/tfleck" target="_blank" class="btn btn-outline btn-circle" title="Keybase"><i class="fas fa-key"></i></a>
           </div>
         </div>
         <br />
@@ -184,9 +185,13 @@
     </p>
   </footer>
   <!-- CSS/JS -->
+  <link href="https://cdn.jsdelivr.net/combine/npm/bootstrap@4/dist/css/bootstrap.min.css,npm/shards-ui@3/dist/css/shards.min.css" rel="stylesheet" type="text/css">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  
   <script defer src="https://cdn.jsdelivr.net/combine/npm/jquery@3/dist/jquery.min.js,npm/bootstrap@4/dist/js/bootstrap.min.js"></script>
   <script defer src="/js/main.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"></noscript>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,300&display=swap" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" rel="stylesheet" type="text/css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/fontawesome.min.css"></noscript>
 </body>
 
 </html>
