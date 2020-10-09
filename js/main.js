@@ -94,16 +94,16 @@ function canUseWebP() {
 
 function loadYoutube(){
   // about me iframe
-  $('iframe#ytvideo').attr('src', 'https://www.youtube-nocookie.com/embed/L9VBpbnXhWk?rel=0');
+  $('iframe#ytvideo').attr('src', 'https://www.youtube-nocookie.com/embed/L9VBpbnXhWk?modestbranding=1&playsinline=1&rel=0');
 
   // inspiration album
-  $('iframe#inspire1').attr('src', 'https://www.youtube-nocookie.com/embed/ji5_MqicxSo');
-  $('iframe#inspire2').attr('src', 'https://www.youtube-nocookie.com/embed/T76FdtKreNQ');
-  $('iframe#inspire3').attr('src', 'https://www.youtube-nocookie.com/embed/y6T-pKTGTFw');
-  $('iframe#inspire4').attr('src', 'https://www.youtube-nocookie.com/embed/LZM9YdO_QKk');
-  $('iframe#inspire5').attr('src', 'https://www.youtube-nocookie.com/embed/nyqLJSclNb4');
-  $('iframe#inspire6').attr('src', 'https://www.youtube-nocookie.com/embed/0RxlJ2TdYPo');
-  $('iframe#inspire7').attr('src', 'https://www.youtube-nocookie.com/embed/TmQmEVPViaY');
-  $('iframe#inspire8').attr('src', 'https://www.youtube-nocookie.com/embed/YUwi1yUGk0Y');
-  $('iframe#inspire9').attr('src', 'https://www.youtube-nocookie.com/embed/ItmAVmvfTyY');
+  $('iframe#inspire1').attr('src', 'https://www.youtube-nocookie.com/embed/ji5_MqicxSo?modestbranding=1&playsinline=1&rel=0');
+  $('iframe#inspire2').attr('src', 'https://www.youtube-nocookie.com/embed/T76FdtKreNQ?modestbranding=1&playsinline=1&rel=0');
+  $('iframe#inspire3').attr('src', 'https://www.youtube-nocookie.com/embed/y6T-pKTGTFw?modestbranding=1&playsinline=1&rel=0');
+  $('iframe#inspire4').attr('src', 'https://www.youtube-nocookie.com/embed/LZM9YdO_QKk?modestbranding=1&playsinline=1&rel=0');
+  $('iframe#inspire5').attr('src', 'https://www.youtube-nocookie.com/embed/nyqLJSclNb4?modestbranding=1&playsinline=1&rel=0');
+  $('iframe#inspire6').attr('src', 'https://www.youtube-nocookie.com/embed/0RxlJ2TdYPo?modestbranding=1&playsinline=1&rel=0');
+  $('iframe#inspire7').attr('src', 'https://www.youtube-nocookie.com/embed/TmQmEVPViaY?modestbranding=1&playsinline=1&rel=0');
+  $('iframe#inspire8').attr('src', 'https://www.youtube-nocookie.com/embed/YUwi1yUGk0Y?modestbranding=1&playsinline=1&rel=0');
+  $('iframe#inspire9').attr('src', 'https://www.youtube-nocookie.com/embed/ItmAVmvfTyY?modestbranding=1&playsinline=1&rel=0');
 }
