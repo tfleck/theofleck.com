@@ -99,6 +99,9 @@ footer p {
     max-height: 641px;
     max-width: 1140px;
 }
+.card-video{
+    background-color: #000;
+}
 .card{
     border: 0px;
     border-radius: 5px;
