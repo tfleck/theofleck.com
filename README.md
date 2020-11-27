@@ -1,2 +1,4 @@
-# tfleck.github.io
-This is my personal resume website, hosted using Github Pages & proxied by Cloudflare
+# theofleck.com
+This is my personal website, hosted using Cloudflare Workers
+
+[https://theofleck.com](https://theofleck.com)
