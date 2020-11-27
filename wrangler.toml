@@ -1,0 +1,9 @@
+name = "resume-site"
+type = "webpack"
+account_id = "b1b85966b3289ab3b61e88ef45c36dbf"
+workers_dev = true
+route = "theofleck.com/*"
+zone_id = "d6a47373d3c974e2349a3b312b8ffda3"
+
+[site]
+bucket = "./public"
