@@ -3,15 +3,6 @@
     font-display: swap;
 }
 
-/* Font Awesome speed tweak */
-.fa {
-    display: none;
- }
- 
-body.fontawesome-loaded .fa {
-    display: initial; /* may not work in IE, use inline-block / block instead */
-}
-
 /* Elements */
 nav.navbar{
     padding-top:10px;
@@ -21,10 +12,10 @@ nav.navbar{
     transition: font-size ease .15s, height ease .3s;
 }
 nav.navbar.shrink {
-    font-size:16px;
+    font-size:18px;
 }
 nav.navbar.shrink .navbar-brand{
-    font-size: 25px;
+    font-size: 28px;
 }
 body{
     position: relative;

@@ -62,10 +62,10 @@ document.addEventListener("DOMContentLoaded", function() {
 $(window).scroll(function() {
   if ($(document).scrollTop() > 50) {
     $('nav').addClass('shrink');
-    $('#icon-img').css('max-width','30px');
+    $('#icon-img').css('max-width','40px');
   } else {
     $('nav').removeClass('shrink');
-    $('#icon-img').css('max-width','40px');
+    $('#icon-img').css('max-width','50px');
   }
 });
 
