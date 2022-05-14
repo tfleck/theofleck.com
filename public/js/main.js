@@ -1,19 +1,19 @@
 //Populate heavy items after DOM loaded
-$(document).ready( function() {
+var documentReady = function() {
   //higher res profile picture
   let can_webp = canUseWebP();
   if(can_webp){
-    $('#profile-override').attr('type', 'image/webp');
-    $('#profile-override').attr('srcset', '/img/profile.webp');
+    document.querySelector('#profile-override').setAttribute('type', 'image/webp');
+    document.querySelector('#profile-override').setAttribute('srcset', '/img/profile.webp');
   } 
   else {
-    $('#profile-override').attr('type', 'image/png');
-    $('#profile-override').attr('srcset', '/img/profile.png');
+    document.querySelector('#profile-override').setAttribute('type', 'image/png');
+    document.querySelector('#profile-override').setAttribute('srcset', '/img/profile.png');
   }
 
   // wait to load youtube videos
-  setTimeout(loadYoutube(),100);
-});
+  setTimeout(loadYoutube(),200);
+};
 
 // register lazy load listener
 document.addEventListener("DOMContentLoaded", function() {
@@ -59,27 +59,34 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 //Shrink navbar on scroll
-$(window).scroll(function() {
-  if ($(document).scrollTop() > 50) {
-    $('nav').addClass('shrink');
-    $('#icon-img').css('max-width','40px');
+window.onscroll = function() {
+  if (document.documentElement.scrollTop > 50) {
+    document.querySelector('nav').classList.add('shrink');
+    document.querySelector('#icon-img').classList.add('shrink');
   } else {
-    $('nav').removeClass('shrink');
-    $('#icon-img').css('max-width','50px');
+    document.querySelector('nav').classList.remove('shrink');
+    document.querySelector('#icon-img').classList.remove('shrink');
   }
-});
+};
 
+/*
 // Add smooth scrolling on all links inside the navbar
-$("nav a").on('click', function(event) {
-  if (this.hash != null && this.hash !== "" && $(this.hash).length > 0) {
-    event.preventDefault();
-    var hash = this.hash;
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top - 65
-    }, 900);
-  }
-});
+function setupSmoothScroll(){
+  document.querySelector("nav a").addEventListener('click', function(event) {
+    console.log(event);
+    if (this.hash != null && this.hash !== "" && document.querySelector(this.hash).length > 0) {
+      event.preventDefault();
+      
+      var hash = this.hash;
+      document.querySelector('html, body').animate({
+        scrollTop: document.querySelector(hash).offset().top - 65
+      }, 900);
+    }
+  });
+}
+*/
 
+// Check if WebP image format is supported by the browser
 function canUseWebP() {
   var elem = document.createElement('canvas');
 
@@ -92,18 +99,66 @@ function canUseWebP() {
   return false;
 }
 
+// populate youtube iframes on main & inspiration pages
 function loadYoutube(){
-  // about me iframe
-  $('iframe#ytvideo').attr('src', 'https://www.youtube-nocookie.com/embed/L9VBpbnXhWk?modestbranding=1&playsinline=1&rel=0');
+  ytvideos = [
+    // about me video
+    {
+      selector: 'iframe#ytvideo',
+      url: 'https://www.youtube-nocookie.com/embed/L9VBpbnXhWk?modestbranding=1&playsinline=1&rel=0'
+    },
+    // inspiration album
+    {
+      selector: 'iframe#inspire1',
+      url: 'https://www.youtube-nocookie.com/embed/ji5_MqicxSo?modestbranding=1&playsinline=1&rel=0'
+    },
+    {
+      selector: 'iframe#inspire2',
+      url: 'https://www.youtube-nocookie.com/embed/T76FdtKreNQ?modestbranding=1&playsinline=1&rel=0'
+    },
+    {
+      selector: 'iframe#inspire3',
+      url: 'https://www.youtube-nocookie.com/embed/y6T-pKTGTFw?modestbranding=1&playsinline=1&rel=0'
+    },
+    {
+      selector: 'iframe#inspire4',
+      url: 'https://www.youtube-nocookie.com/embed/LZM9YdO_QKk?modestbranding=1&playsinline=1&rel=0'
+    },
+    {
+      selector: 'iframe#inspire5',
+      url: 'https://www.youtube-nocookie.com/embed/nyqLJSclNb4?modestbranding=1&playsinline=1&rel=0'
+    },
+    {
+      selector: 'iframe#inspire6',
+      url: 'https://www.youtube-nocookie.com/embed/0RxlJ2TdYPo?modestbranding=1&playsinline=1&rel=0'
+    },
+    {
+      selector: 'iframe#inspire7',
+      url: 'https://www.youtube-nocookie.com/embed/TmQmEVPViaY?modestbranding=1&playsinline=1&rel=0'
+    },
+    {
+      selector: 'iframe#inspire8',
+      url: 'https://www.youtube-nocookie.com/embed/YUwi1yUGk0Y?modestbranding=1&playsinline=1&rel=0'
+    },
+    {
+      selector: 'iframe#inspire9',
+      url: 'https://www.youtube-nocookie.com/embed/ItmAVmvfTyY?modestbranding=1&playsinline=1&rel=0'
+    },
+  ]
+  ytvideos.forEach(video => {
+    const elem = document.querySelector(video.selector);
+    if (elem !== null) {
+      elem.setAttribute('src', video.url);
+    }
+  });
+}
 
-  // inspiration album
-  $('iframe#inspire1').attr('src', 'https://www.youtube-nocookie.com/embed/ji5_MqicxSo?modestbranding=1&playsinline=1&rel=0');
-  $('iframe#inspire2').attr('src', 'https://www.youtube-nocookie.com/embed/T76FdtKreNQ?modestbranding=1&playsinline=1&rel=0');
-  $('iframe#inspire3').attr('src', 'https://www.youtube-nocookie.com/embed/y6T-pKTGTFw?modestbranding=1&playsinline=1&rel=0');
-  $('iframe#inspire4').attr('src', 'https://www.youtube-nocookie.com/embed/LZM9YdO_QKk?modestbranding=1&playsinline=1&rel=0');
-  $('iframe#inspire5').attr('src', 'https://www.youtube-nocookie.com/embed/nyqLJSclNb4?modestbranding=1&playsinline=1&rel=0');
-  $('iframe#inspire6').attr('src', 'https://www.youtube-nocookie.com/embed/0RxlJ2TdYPo?modestbranding=1&playsinline=1&rel=0');
-  $('iframe#inspire7').attr('src', 'https://www.youtube-nocookie.com/embed/TmQmEVPViaY?modestbranding=1&playsinline=1&rel=0');
-  $('iframe#inspire8').attr('src', 'https://www.youtube-nocookie.com/embed/YUwi1yUGk0Y?modestbranding=1&playsinline=1&rel=0');
-  $('iframe#inspire9').attr('src', 'https://www.youtube-nocookie.com/embed/ItmAVmvfTyY?modestbranding=1&playsinline=1&rel=0');
+// run code when document reaches 'ready' state (alt for jQuery .ready())
+if (
+  document.readyState === "complete" ||
+  (document.readyState !== "loading" && !document.documentElement.doScroll)
+) {
+  documentReady();
+} else {
+  document.addEventListener("DOMContentLoaded", documentReady);
 }

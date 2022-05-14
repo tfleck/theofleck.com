@@ -8,17 +8,17 @@
   <meta name="author" content="Theo Fleck">
   <title>Theo Fleck</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
-  <link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/shards-ui/3.0.0/css/shards.min.css" integrity="sha512-ATPNLwY6zsriAW9aWaVyzCz5bRunkyNF3m7Es87HrwwhcJ2LwGDHnkPJzNRUOZI4fUcg6kEoNqC/rAUfvRizRw==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/shards-ui/3.0.0/css/shards.min.css" integrity="sha512-ATPNLwY6zsriAW9aWaVyzCz5bRunkyNF3m7Es87HrwwhcJ2LwGDHnkPJzNRUOZI4fUcg6kEoNqC/rAUfvRizRw==" crossorigin="anonymous" /> -->
 
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />  
 </head>
 
-<body class="bg-dark" data-spy="scroll" data-target=".navbar" data-offset="75">
+<body class="bg-dark" data-bs-spy="scroll" data-bs-target=".navbar">
   <header>
     <nav class="navbar fixed-top nav-pills navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#head">
-          <svg id="icon-img" width="50" height="55" max-width="50px" viewBox="0 0 1792 1792" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <a class="navbar-brand" href="#">
+          <svg id="icon-img" width="50" viewBox="0 0 1792 1792" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M649 983l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23t-10 23zm1079 457v64q0 14-9 23t-23 9h-960q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h960q14 0 23 9t9 23z"/>
           </svg>
           Theo Fleck
@@ -27,17 +27,17 @@
             <span class="navbar-toggler-icon"></span>
         </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="#aboutme">About</a>
-          <a class="nav-item nav-link" href="#projects">Projects</a>
-          <a class="nav-item nav-link" href="#contact">Contact</a>
-          <a class="nav-item nav-link" href="/inspiration">Inspiration</a>
+        <div class="navbar-nav ms-auto">
+          <a class="nav-item nav-link fw-light" href="#aboutme">About</a>
+          <a class="nav-item nav-link fw-light" href="#projects">Projects</a>
+          <a class="nav-item nav-link fw-light" href="#contact">Contact</a>
+          <a class="nav-item nav-link fw-light" href="/inspiration">Inspiration</a>
         </div>
       </div>
     </nav>
   </header>
   <main role="main">
-    <section class="jumbotron text-center top-section" id="top">
+    <section class="text-center top-section pt-5 pb-5 mb-3" id="top">
       <div class="container-fluid">
         <picture>
           <source id="profile-override">
@@ -47,12 +47,12 @@
         
         <h1 class="section-heading">Theo Fleck</h1>
         <hr />
-        <h3>
+        <h3 class="fw-normal">
           Engineer &bull; Maker &bull; Developer
         </h3>
       </div>
     </section>
-    <section class="jumbotron text-center" id="aboutme">
+    <section class="text-center pt-5 pb-5 mb-3" id="aboutme">
       <div class="justify-content-center">
         <h1 class="section-heading">About Me</h1>
         <hr />
@@ -161,7 +161,7 @@
           </div>
       </div>
     </section>
-    <section class="jumbotron text-center" id="contact">
+    <section class="text-center pt-5 pb-5 mb-3" id="contact">
       <div class="container-fluid">
         <h1 class="section-heading">Contact Me</h1>
         <hr />
@@ -215,15 +215,10 @@
     </p>
   </footer>
   <!-- CSS/JS -->
-  <link href="/css/style.css" rel="stylesheet" as="style" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,300&display=swap" rel="preconnect stylesheet" as="font" type="text/css">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
-  <script src="/js/main.js"></script>
   
-  <!-- Cloudflare Web Analytics -->
-  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d694c2d9ca30419881b9ba1f27a4b7fe"}'></script>
-  <!-- End Cloudflare Web Analytics -->
+  <link href="/css/style.css" rel="stylesheet" as="style" type="text/css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>
