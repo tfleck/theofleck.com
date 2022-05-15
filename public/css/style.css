@@ -226,6 +226,7 @@ footer p {
 
 #top {
     background-color: transparent;
+    scroll-margin-top: 100px;
 }
 
 #top .section-heading {
@@ -245,6 +246,11 @@ footer p {
 
 #aboutme {
     background-color: transparent;
+    scroll-margin-top: 40px;
+}
+
+#projects {
+    scroll-margin-top: 40px;
 }
 
 #projects .section-heading {
@@ -253,6 +259,7 @@ footer p {
 
 #contact {
     background-color: transparent;
+    scroll-margin-top: 100px;
 }
 
 #contact .col-lg-6 {

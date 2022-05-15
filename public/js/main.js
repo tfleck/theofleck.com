@@ -1,25 +1,28 @@
 // Populate heavy items after DOM loaded
-var documentReady = function() {
+const documentReady = function() {
   //higher res profile picture
-  let can_webp = canUseWebP();
-  if(can_webp){
-    document.querySelector('#profile-override').setAttribute('type', 'image/webp');
-    document.querySelector('#profile-override').setAttribute('srcset', '/img/profile.webp');
-  } 
-  else {
-    document.querySelector('#profile-override').setAttribute('type', 'image/png');
-    document.querySelector('#profile-override').setAttribute('srcset', '/img/profile.png');
+  const can_webp = canUseWebP();
+  const profileOverride = document.querySelector('#profile-override');
+  if (profileOverride !== null){
+    if(can_webp){
+      profileOverride.setAttribute('type', 'image/webp');
+      profileOverride.setAttribute('srcset', '/img/profile.webp');
+    } 
+    else {
+      profileOverride.setAttribute('type', 'image/png');
+      profileOverride.setAttribute('srcset', '/img/profile.png');
+    }
   }
-
-  // add smooth scroll listeners to nav
-  setupSmoothScroll();
 
   // wait to load youtube videos
   loadYoutube();
+
+  // add lazy load listeners
+  addLazyListeners();
 };
 
 // register lazy load listener
-document.addEventListener("DOMContentLoaded", function() {
+const addLazyListeners = function() {
   let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
   let active = false;
   let can_webp = canUseWebP();
@@ -59,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.addEventListener("scroll", lazyLoad);
   window.addEventListener("resize", lazyLoad);
   window.addEventListener("orientationchange", lazyLoad);
-});
+};
 
 //Shrink navbar on scroll
 window.onscroll = function() {
@@ -72,37 +75,9 @@ window.onscroll = function() {
   }
 };
 
-// Add smooth scrolling on all links inside the navbar
-function setupSmoothScroll() {
-  const navLinks = document.querySelectorAll("nav a");
-  navLinks.forEach(navLink => {
-    navLink.addEventListener('click', function (event) {
-      const hash = this.hash;
-      if (hash != null && hash !== "" && hash.length > 1) {
-        event.preventDefault();
-
-        const href = this.getAttribute("href");
-        const offsetTop = document.querySelector(href).offsetTop + 40;
-
-        window.scrollTo({
-          top: offsetTop,
-          behavior: "smooth"
-        })
-
-        // Add hash (#) to URL when done scrolling (default click behavior), without jumping to hash
-        if (history.pushState) {
-          history.pushState(null, null, hash); 
-        } else {
-            window.location.hash = hash;
-        } 
-      }
-    });
-  });
-}
-
 // Check if WebP image format is supported by the browser
 function canUseWebP() {
-  var elem = document.createElement('canvas');
+  const elem = document.createElement('canvas');
 
   if (!!(elem.getContext && elem.getContext('2d'))) {
       // was able or not to get WebP representation
@@ -116,86 +91,51 @@ function canUseWebP() {
 function ytClickListener(){
   this.innerHTML = '<iframe frameBorder="0" class="video" ' +
         'allow="encrypted-media; picture-in-picture"' +
-        'src="https://www.youtube-nocookie.com/embed/' + this.dataset.embed + '?modestbranding=1&playsinline=1&rel=0"' +
+        'src="https://www.youtube-nocookie.com/embed/' + this.dataset.embed + 
+        '?modestbranding=1&playsinline=1&rel=0"' +
         ' allowFullScreen></iframe>';
   this.removeEventListener("click", ytClickListener)
 }
 
 // populate youtube iframes on main & inspiration pages
-function loadYoutube(){
+function loadYoutube() {
   //Load YouTube Videos on page...
-  var youTubeVideos = document.querySelectorAll('.youtube');
-  for (var i = 0; i < youTubeVideos.length; i++) {
-      var thumbnail = "https://img.youtube.com/vi/"+ youTubeVideos[i].dataset.embed +"/maxresdefault.jpg";
+  const youtubeVideos = document.querySelectorAll('.youtube');
+  if (youtubeVideos !== null && youtubeVideos.length > 0) {
+    youtubeVideos.forEach(video => {
+      const thumbnail = "https://img.youtube.com/vi/" + video.dataset.embed + "/maxresdefault.jpg";
 
       //set microdata attributes for SEO
-      youTubeVideos[i].setAttribute("itemprop", "video");
-      youTubeVideos[i].setAttribute("itemscope", '');
-      youTubeVideos[i].setAttribute("itemtype", "http://schema.org/VideoObject");
+      video.setAttribute("itemprop", "video");
+      video.setAttribute("itemscope", '');
+      video.setAttribute("itemtype", "http://schema.org/VideoObject");
 
       //set HTML
-      youTubeVideos[i].innerHTML = '<div class="play"></div>' +
-          '<meta itemprop="embedURL" content="https://www.youtube.com/embed/' +  youTubeVideos[i].dataset.embed +'" />' +
-          '<img style="cursor: pointer;" class="img-fluid" src="' + thumbnail + '" />';
+      video.innerHTML = '<div class="play"></div>' +
+        '<meta itemprop="embedURL" content="https://www.youtube.com/embed/' + video.dataset.embed + '" />' +
+        '<img style="cursor: pointer;" class="img-fluid" src="' + thumbnail + '" />';
 
       //add click event that will load YouTube video
-      youTubeVideos[i].addEventListener("click", ytClickListener);
-
+      video.addEventListener("click", ytClickListener);
+    });
   }
 
-  /*
+  const inspireVideos = document.querySelectorAll('.youtube-inspire');
+  if (inspireVideos !== null && inspireVideos.length > 0) {
+    inspireVideos.forEach(video => {
+      //set microdata attributes for SEO
+      video.setAttribute("itemprop", "video");
+      video.setAttribute("itemscope", '');
+      video.setAttribute("itemtype", "http://schema.org/VideoObject");
 
-  ytvideos = [
-    // about me video
-    {
-      selector: 'iframe#ytvideo',
-      url: 'https://www.youtube-nocookie.com/embed/L9VBpbnXhWk?modestbranding=1&playsinline=1&rel=0'
-    },
-    // inspiration album
-    {
-      selector: 'iframe#inspire1',
-      url: 'https://www.youtube-nocookie.com/embed/ji5_MqicxSo?modestbranding=1&playsinline=1&rel=0'
-    },
-    {
-      selector: 'iframe#inspire2',
-      url: 'https://www.youtube-nocookie.com/embed/T76FdtKreNQ?modestbranding=1&playsinline=1&rel=0'
-    },
-    {
-      selector: 'iframe#inspire3',
-      url: 'https://www.youtube-nocookie.com/embed/y6T-pKTGTFw?modestbranding=1&playsinline=1&rel=0'
-    },
-    {
-      selector: 'iframe#inspire4',
-      url: 'https://www.youtube-nocookie.com/embed/LZM9YdO_QKk?modestbranding=1&playsinline=1&rel=0'
-    },
-    {
-      selector: 'iframe#inspire5',
-      url: 'https://www.youtube-nocookie.com/embed/nyqLJSclNb4?modestbranding=1&playsinline=1&rel=0'
-    },
-    {
-      selector: 'iframe#inspire6',
-      url: 'https://www.youtube-nocookie.com/embed/0RxlJ2TdYPo?modestbranding=1&playsinline=1&rel=0'
-    },
-    {
-      selector: 'iframe#inspire7',
-      url: 'https://www.youtube-nocookie.com/embed/TmQmEVPViaY?modestbranding=1&playsinline=1&rel=0'
-    },
-    {
-      selector: 'iframe#inspire8',
-      url: 'https://www.youtube-nocookie.com/embed/YUwi1yUGk0Y?modestbranding=1&playsinline=1&rel=0'
-    },
-    {
-      selector: 'iframe#inspire9',
-      url: 'https://www.youtube-nocookie.com/embed/ItmAVmvfTyY?modestbranding=1&playsinline=1&rel=0'
-    },
-  ]
-  ytvideos.forEach(video => {
-    const elem = document.querySelector(video.selector);
-    if (elem !== null) {
-      elem.setAttribute('src', video.url);
-    }
-  });
-  */
+      //set HTML
+      video.innerHTML = '<iframe frameBorder="0" class="video" ' +
+        'allow="encrypted-media; picture-in-picture"' +
+        'src="https://www.youtube-nocookie.com/embed/' + video.dataset.embed + 
+        '?modestbranding=1&playsinline=1&rel=0"' +
+        ' allowFullScreen></iframe>';
+    });
+  }
 }
 
 // run code when document reaches 'ready' state (alt for jQuery .ready())
