@@ -9,21 +9,21 @@
   <title>Theo Fleck</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- <link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/shards-ui/3.0.0/css/shards.min.css" integrity="sha512-ATPNLwY6zsriAW9aWaVyzCz5bRunkyNF3m7Es87HrwwhcJ2LwGDHnkPJzNRUOZI4fUcg6kEoNqC/rAUfvRizRw==" crossorigin="anonymous" /> -->
 
-  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />  
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+  
 </head>
 
-<body class="bg-dark" data-bs-spy="scroll" data-bs-target=".navbar">
+<body class="bg-dark" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset=100>
   <header>
     <nav class="navbar fixed-top nav-pills navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="#top">
           <svg id="icon-img" width="50" viewBox="0 0 1792 1792" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M649 983l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23t-10 23zm1079 457v64q0 14-9 23t-23 9h-960q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h960q14 0 23 9t9 23z"/>
           </svg>
           Theo Fleck
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -42,7 +42,7 @@
         <picture>
           <source id="profile-override">
           <source type="image/webp" srcset="/img/profile-small.webp">
-          <img class="img-responsive" id="profile-img" src="/img/profile-small.png" alt="">
+          <img class="img-responsive" id="profile-img" decoding="async" src="/img/profile-small.png" alt="theo's profile picture">
         </picture>
         
         <h1 class="section-heading">Theo Fleck</h1>
@@ -62,9 +62,7 @@
         <br>
         <div class="row justify-content-center">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 video">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe title="Life Explained in 27 seconds YouTube video" class="video" id="ytvideo" src="" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
-            </div>
+            <div class="ratio ratio-16x9 youtube" data-embed="L9VBpbnXhWk"></div>
           </div>
         </div>
       </div>
@@ -77,7 +75,7 @@
             <!-- First Row -->
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top lazy" data-src="/img/album/philmont.png" alt="Philmont trip">
+                <img class="card-img-top lazy" decoding="async" data-src="/img/album/philmont.png" alt="Philmont trip">
                 <div class="card-body">
                   <h4 class="card-title">Philmont</h4>
                   <p class="card-text">I went out to Philmont Scout Ranch in Cimarron, NM for a 14-day Order of the Arrow Trail Crew trek including service projects, trail-building, backpacking, and wilderness survival.</p>
@@ -86,7 +84,7 @@
             </div>
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top lazy" data-src="/img/album/shoe.jpg" alt="Resonate forward team">
+                <img class="card-img-top lazy" decoding="async" data-src="/img/album/shoe.jpg" alt="Resonate forward team">
                 <div class="card-body">
                   <h4 class="card-title">Resonate Forward</h4>
                   <p class="card-text">I worked on a research project to develop wearable devices for Parkinson's patients to help with tremors and freezing of gait. You can <a target="_blank" rel="noreferrer" href="https://www.nbcphiladelphia.com/news/tech/Team-Uses-High-Tech-Device-to-Combat-Parkinson_s-Disease_Philadelphia-506784522.html">watch the NBC story here</a>, or <a target="_blank" rel="noreferrer" href="https://www.udel.edu/udaily/2019/march/resonate-forward-startup-parkinsons-device/">read the UDaily article here.</a></p>
@@ -95,7 +93,7 @@
             </div>
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top lazy" data-src="/img/album/eagleproject.jpg" alt="Eagle scout project">
+                <img class="card-img-top lazy" decoding="async" data-src="/img/album/eagleproject.jpg" alt="Eagle scout project">
                 <div class="card-body">
                   <h4 class="card-title">Eagle Scout</h4>
                   <p class="card-text">I led a 225 man hour eagle scout project at the Medal of Honor Grove, restoring the Nevada & Kentucky acres. You can <a target="_blank" rel="noreferrer" href="https://www.flickr.com/photos/170165324@N05/albums/72157708781877798/with/47942129642/">see more here.</a></p>
@@ -105,7 +103,7 @@
             <!-- Second Row -->
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top lazy" data-src="/img/album/rigv3.png" alt="Personal computer build">
+                <img class="card-img-top lazy" decoding="async" data-src="/img/album/rigv3.png" alt="Personal computer build">
                 <div class="card-body">
                   <h4 class="card-title">Custom Desktop</h4>
                   <p class="card-text">This is my personal desktop rig that I built. It's running an i7-4790k, 16GB RAM, a GTX 1080, and a 1TB NVMe boot drive. The system has 480mm of total radiator space which keeps everything cool.</p>
@@ -114,7 +112,7 @@
             </div>
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top lazy" data-src="/img/album/398project.jpg" alt="Junior design project">
+                <img class="card-img-top lazy" decoding="async" data-src="/img/album/398project.jpg" alt="Junior design project">
                 <div class="card-body">
                   <h4 class="card-title">Junior Design</h4>
                   <p class="card-text">I designed and built a wearable monitor for harmful environmental conditions. It monitors UV light, VOCs, temperature, humidity, sound level, and magnetic fields.</p>
@@ -123,7 +121,7 @@
             </div>
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top lazy" data-src="/img/album/realrandom.png" alt="Real Random logo">
+                <img class="card-img-top lazy" decoding="async" data-src="/img/album/realrandom.png" alt="Real Random logo">
                 <div class="card-body">
                   <h4 class="card-title">Real Random</h4>
                   <p class="card-text">I was one of the Co-Founders of <a target="_blank" rel="noreferrer" href="https://realrandom.co">Real Random, LLC</a>. Real Random specializes in Non-Deterministic Random Bit Generation. We have developed a way to capture entropy from unpredictable physical sources.</p>
@@ -133,7 +131,7 @@
             <!-- Third Row -->
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top lazy" data-src="/img/album/drone.png" alt="Drone used in competition">
+                <img class="card-img-top lazy" decoding="async" data-src="/img/album/drone.png" alt="Drone used in competition">
                 <div class="card-body">
                   <h4 class="card-title">Autonomous Drones</h4>
                   <p class="card-text">I won the 2017 UD ECE Autonomous Drone Competition, where we had to program a Raspberry Pi to fly a DJI Matrice 100 drone through a course start to finish with no human intervention. You can <a target="_blank" rel="noreferrer" href="https://www.ece.udel.edu/news/2017/drone-competition/">read the article here.</a></p>
@@ -142,7 +140,7 @@
             </div>
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top lazy" data-src="/img/album/evc.png" alt="UD electric racecar">
+                <img class="card-img-top lazy" decoding="async" data-src="/img/album/evc.png" alt="UD electric racecar">
                 <div class="card-body">
                   <h4 class="card-title">Electric Vehicles</h4>
                   <p class="card-text">I was the president of the Electric Vehicle Club at UD, working on building an electric FSAE car. The car has a 35kW 3-phase AC motor, and a 148V lithium-ion battery pack capable of driving 500A peak current.</p>
@@ -151,7 +149,7 @@
             </div>
             <div class="col-lg-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top lazy" data-src="/img/album/minibike.png" alt="Custom built minibike">
+                <img class="card-img-top lazy" decoding="async" data-src="/img/album/minibike.png" alt="Custom built minibike">
                 <div class="card-body">
                   <h4 class="card-title">Mini Bike</h4>
                   <p class="card-text">This is the crazy mini bike I built. It's a kit frame with a Harbor Freight Predator 212 engine with upgraded carburetor jet, emulsion tube, intake, exhaust, and 8 degrees of timing advance. The top speed is ~35 mph.</p>

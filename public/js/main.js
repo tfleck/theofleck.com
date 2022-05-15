@@ -1,4 +1,4 @@
-//Populate heavy items after DOM loaded
+// Populate heavy items after DOM loaded
 var documentReady = function() {
   //higher res profile picture
   let can_webp = canUseWebP();
@@ -11,8 +11,11 @@ var documentReady = function() {
     document.querySelector('#profile-override').setAttribute('srcset', '/img/profile.png');
   }
 
+  // add smooth scroll listeners to nav
+  setupSmoothScroll();
+
   // wait to load youtube videos
-  setTimeout(loadYoutube(),200);
+  loadYoutube();
 };
 
 // register lazy load listener
@@ -69,22 +72,33 @@ window.onscroll = function() {
   }
 };
 
-/*
 // Add smooth scrolling on all links inside the navbar
-function setupSmoothScroll(){
-  document.querySelector("nav a").addEventListener('click', function(event) {
-    console.log(event);
-    if (this.hash != null && this.hash !== "" && document.querySelector(this.hash).length > 0) {
-      event.preventDefault();
-      
-      var hash = this.hash;
-      document.querySelector('html, body').animate({
-        scrollTop: document.querySelector(hash).offset().top - 65
-      }, 900);
-    }
+function setupSmoothScroll() {
+  const navLinks = document.querySelectorAll("nav a");
+  navLinks.forEach(navLink => {
+    navLink.addEventListener('click', function (event) {
+      const hash = this.hash;
+      if (hash != null && hash !== "" && hash.length > 1) {
+        event.preventDefault();
+
+        const href = this.getAttribute("href");
+        const offsetTop = document.querySelector(href).offsetTop + 40;
+
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth"
+        })
+
+        // Add hash (#) to URL when done scrolling (default click behavior), without jumping to hash
+        if (history.pushState) {
+          history.pushState(null, null, hash); 
+        } else {
+            window.location.hash = hash;
+        } 
+      }
+    });
   });
 }
-*/
 
 // Check if WebP image format is supported by the browser
 function canUseWebP() {
@@ -99,8 +113,38 @@ function canUseWebP() {
   return false;
 }
 
+function ytClickListener(){
+  this.innerHTML = '<iframe frameBorder="0" class="video" ' +
+        'allow="encrypted-media; picture-in-picture"' +
+        'src="https://www.youtube-nocookie.com/embed/' + this.dataset.embed + '?modestbranding=1&playsinline=1&rel=0"' +
+        ' allowFullScreen></iframe>';
+  this.removeEventListener("click", ytClickListener)
+}
+
 // populate youtube iframes on main & inspiration pages
 function loadYoutube(){
+  //Load YouTube Videos on page...
+  var youTubeVideos = document.querySelectorAll('.youtube');
+  for (var i = 0; i < youTubeVideos.length; i++) {
+      var thumbnail = "https://img.youtube.com/vi/"+ youTubeVideos[i].dataset.embed +"/maxresdefault.jpg";
+
+      //set microdata attributes for SEO
+      youTubeVideos[i].setAttribute("itemprop", "video");
+      youTubeVideos[i].setAttribute("itemscope", '');
+      youTubeVideos[i].setAttribute("itemtype", "http://schema.org/VideoObject");
+
+      //set HTML
+      youTubeVideos[i].innerHTML = '<div class="play"></div>' +
+          '<meta itemprop="embedURL" content="https://www.youtube.com/embed/' +  youTubeVideos[i].dataset.embed +'" />' +
+          '<img style="cursor: pointer;" class="img-fluid" src="' + thumbnail + '" />';
+
+      //add click event that will load YouTube video
+      youTubeVideos[i].addEventListener("click", ytClickListener);
+
+  }
+
+  /*
+
   ytvideos = [
     // about me video
     {
@@ -151,6 +195,7 @@ function loadYoutube(){
       elem.setAttribute('src', video.url);
     }
   });
+  */
 }
 
 // run code when document reaches 'ready' state (alt for jQuery .ready())
