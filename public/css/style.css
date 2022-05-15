@@ -124,6 +124,12 @@ footer p {
     border-top-right-radius: 5px;
 }
 
+.image-placeholder{
+    background: url("data:image/svg+xml;utf8, <svg class='bd-placeholder-img card-img-top img-fluid' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder' preserveAspectRatio='xMidYMid slice' focusable='false'><title>Placeholder</title><rect width='100%' height='100%' fill='%23868e96'></rect></svg>") no-repeat;
+    min-height: 250px;
+    min-width: 100%
+}
+
 .btn-circle {
     height: 60px;
     width: 60px;

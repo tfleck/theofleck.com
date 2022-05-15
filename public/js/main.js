@@ -33,7 +33,7 @@ const addLazyListeners = function() {
 
       setTimeout(function() {
         lazyImages.forEach(function(lazyImage) {
-          if ((lazyImage.getBoundingClientRect().top <= window.innerHeight+500 && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+          if ((lazyImage.getBoundingClientRect().top <= window.innerHeight+250 && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
             if(can_webp){
               lazyImage.src = lazyImage.dataset.src.split('.')[0]+'.webp';
             }
@@ -63,6 +63,7 @@ const addLazyListeners = function() {
   window.addEventListener("resize", lazyLoad);
   window.addEventListener("orientationchange", lazyLoad);
 };
+
 
 //Shrink navbar on scroll
 window.onscroll = function() {
@@ -113,7 +114,7 @@ function loadYoutube() {
       //set HTML
       video.innerHTML = '<div class="play"></div>' +
         '<meta itemprop="embedURL" content="https://www.youtube.com/embed/' + video.dataset.embed + '" />' +
-        '<img style="cursor: pointer;" class="img-fluid" src="' + thumbnail + '" />';
+        '<img style="cursor: pointer;" class="img-fluid" alt="youtube thumbnail" src="' + thumbnail + '" />';
 
       //add click event that will load YouTube video
       video.addEventListener("click", ytClickListener);
